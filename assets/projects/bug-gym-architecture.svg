@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Bug Gym architecture, labeled">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5c6779"/></marker>
+  <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#f5a524"/></marker>
+  <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#e6e9f0" stroke-opacity=".045"/></pattern>
+  <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" fill="#f5a524" fill-opacity=".16"/></pattern>
+  <radialGradient id="glow" cx="22%" cy="9%" r="65%"><stop offset="0" stop-color="#f5a524" stop-opacity=".10"/><stop offset="1" stop-color="#0b0e14" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1920" height="1080" fill="#0b0e14"/>
+<rect width="1920" height="1080" fill="url(#grid)"/>
+<rect width="1920" height="1080" fill="url(#dots)"/>
+<rect width="1920" height="1080" fill="url(#glow)"/>
+<rect x="20" y="20" width="1880" height="1040" fill="none" stroke="#242c3b" stroke-opacity=".8"/>
+
+<text x="56" y="58" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f5a524"   letter-spacing="2.2" >WORKSHOP / ARCHITECTURE 09 / 11</text>
+<text x="1864" y="58" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#98a2b3"  text-anchor="end" letter-spacing="2" >BUG GYM / SOLO BUILD / 2026</text>
+<line x1="56" y1="74" x2="1864" y2="74" stroke="#354055" stroke-opacity=".7"/>
+
+<text x="56" y="126" font-family="Arial, Helvetica, sans-serif" font-size="45" fill="#e6e9f0" font-weight="700"   >A real repo, one planted bug,</text>
+<text x="56" y="174" font-family="Arial, Helvetica, sans-serif" font-size="45" fill="#f5a524" font-weight="700"   >proven by the suite.</text>
+<text x="760" y="112" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#98a2b3"    >Agents propose and patch only test-covered lines.</text>
+<text x="760" y="135" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#98a2b3"    >The verifier must show clean pass, bugged fail, and reference fix pass.</text>
+<text x="760" y="158" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#e6e9f0"    >Every tool call is governed. Every decision is recorded.</text>
+
+<g>
+  <rect x="1482" y="92" width="382" height="96" rx="8" fill="#12161f" stroke="#354055" stroke-opacity=".7"/>
+  <text x="1502" y="116" font-family="Consolas, 'Courier New', monospace" font-size="9.5" fill="#98a2b3"   letter-spacing="1.2" >REAL RUN / 98.5S TO READY</text>
+  <text x="1502" y="147" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#f87171" font-weight="700"   >1 failed</text>
+  <text x="1592" y="147" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#5c6779"    >→</text>
+  <text x="1626" y="147" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#4ade80" font-weight="700"   >6 passed</text>
+  <text x="1502" y="171" font-family="Consolas, 'Courier New', monospace" font-size="9.4" fill="#98a2b3"    >mjhea0/flaskr-tdd · challenge 3254bf3c2e98dbe5</text>
+</g>
+
+<text x="56" y="218" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f5a524"   letter-spacing="2" >PLANE 01 / INGEST + SCOPE</text>
+<text x="1864" y="218" font-family="Consolas, 'Courier New', monospace" font-size="9.5" fill="#98a2b3"  text-anchor="end" letter-spacing="1.2" >THE REPO IS NEVER MODIFIED</text>
+
+<g>
+  <rect x="60" y="245" width="272" height="122" rx="8" fill="#000" opacity=".22"/>
+  <rect x="56" y="238" width="272" height="122" rx="8" fill="#12161f" stroke="#f5a524" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="56" y="238" width="4" height="122" rx="2" fill="#f5a524" opacity=".9"/>
+</g>
+<text x="76" y="268" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f5a524"   letter-spacing="1.4" >01 / REAL REPO</text>
+<text x="76" y="298" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#e6e9f0" font-weight="700"   >GitHub or zip</text>
+<text x="76" y="324" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#ffd58a"    >mjhea0/flaskr-tdd</text>
+<text x="76" y="345" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >Flask · pytest · 6 tests</text>
+
+<g>
+  <rect x="368" y="245" width="272" height="122" rx="8" fill="#000" opacity=".22"/>
+  <rect x="364" y="238" width="272" height="122" rx="8" fill="#12161f" stroke="#7aa2ff" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="364" y="238" width="4" height="122" rx="2" fill="#7aa2ff" opacity=".9"/>
+</g>
+<text x="384" y="268" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#7aa2ff"   letter-spacing="1.4" >02 / ISOLATED WORKSPACE</text>
+<text x="384" y="298" font-family="Consolas, 'Courier New', monospace" font-size="20" fill="#e6e9f0" font-weight="700"   >workspaces/</text>
+<text x="384" y="324" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#e6e9f0"    >two-hour TTL sweeper</text>
+<text x="384" y="345" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >the original repo is untouched</text>
+
+<g>
+  <rect x="676" y="245" width="272" height="122" rx="8" fill="#000" opacity=".22"/>
+  <rect x="672" y="238" width="272" height="122" rx="8" fill="#12161f" stroke="#e6e9f0" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="672" y="238" width="4" height="122" rx="2" fill="#e6e9f0" opacity=".9"/>
+</g>
+<text x="692" y="268" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#e6e9f0"   letter-spacing="1.4" >03 / DETECT + BASELINE</text>
+<text x="692" y="298" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#e6e9f0" font-weight="700"   >stack + install</text>
+<text x="692" y="324" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#e6e9f0"    >run the clean suite first</text>
+<text x="692" y="345" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >clean pass is a precondition</text>
+
+<g>
+  <rect x="984" y="245" width="272" height="122" rx="8" fill="#000" opacity=".22"/>
+  <rect x="980" y="238" width="272" height="122" rx="8" fill="#12161f" stroke="#4ade80" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="980" y="238" width="4" height="122" rx="2" fill="#4ade80" opacity=".9"/>
+</g>
+<text x="1000" y="268" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ade80"   letter-spacing="1.4" >04 / COVERAGE</text>
+<text x="1000" y="298" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#e6e9f0" font-weight="700"   >tested lines only</text>
+<text x="1000" y="324" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#e6e9f0"    >marks what the suite executes</text>
+<text x="1000" y="345" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >the planner is scoped here</text>
+
+<g>
+  <rect x="1292" y="245" width="272" height="122" rx="8" fill="#000" opacity=".22"/>
+  <rect x="1288" y="238" width="272" height="122" rx="8" fill="#12161f" stroke="#f87171" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="1288" y="238" width="4" height="122" rx="2" fill="#f87171" opacity=".9"/>
+</g>
+<text x="1308" y="268" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f87171"   letter-spacing="1.4" >05 / ONE PLANTED BUG</text>
+<text x="1308" y="298" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#e6e9f0" font-weight="700"   >single source edit</text>
+<text x="1308" y="324" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#e6e9f0"    >string edits need an assertion</text>
+<text x="1308" y="345" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >cosmetic edits are rejected</text>
+
+<g>
+  <rect x="1600" y="245" width="268" height="122" rx="8" fill="#000" opacity=".22"/>
+  <rect x="1596" y="238" width="268" height="122" rx="8" fill="#12161f" stroke="#f5a524" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="1596" y="238" width="4" height="122" rx="2" fill="#f5a524" opacity=".9"/>
+</g>
+<text x="1616" y="268" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f5a524"   letter-spacing="1.4" >06 / TEST GATE</text>
+<text x="1616" y="298" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#e6e9f0" font-weight="700"   >clean pass / bugged fail</text>
+<text x="1616" y="324" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#e6e9f0"    >reference fix passes again</text>
+<text x="1616" y="345" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >or the job replans</text>
+
+<line x1="328" y1="299" x2="360" y2="299" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+<line x1="636" y1="299" x2="668" y2="299" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+<line x1="944" y1="299" x2="976" y2="299" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+<line x1="1252" y1="299" x2="1284" y2="299" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+<line x1="1560" y1="299" x2="1592" y2="299" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+
+<text x="56" y="402" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f5a524"   letter-spacing="2" >PLANE 02 / GOVERNED CREW</text>
+<text x="1864" y="402" font-family="Consolas, 'Courier New', monospace" font-size="9.5" fill="#98a2b3"  text-anchor="end" letter-spacing="1.2" >THE TOOLGATEWAY IS THE ONLY PATH</text>
+
+<g>
+  <rect x="60" y="429" width="320" height="164" rx="8" fill="#000" opacity=".22"/>
+  <rect x="56" y="422" width="320" height="164" rx="8" fill="#12161f" stroke="#f5a524" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="56" y="422" width="4" height="164" rx="2" fill="#f5a524" opacity=".9"/>
+</g>
+<text x="76" y="452" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f5a524"   letter-spacing="1.4" >01 / PLANNER</text>
+<text x="76" y="480" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#e6e9f0" font-weight="700"   >read-only</text>
+<text x="76" y="506" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#4ade80"    >list_files · read_file</text>
+<text x="76" y="526" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >denies patch_source, patch_tests,</text>
+<text x="76" y="542" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >run_tests, run_status, git_diff</text>
+<text x="76" y="568" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#e6e9f0"    >proposes a bug on covered lines</text>
+
+<g>
+  <rect x="412" y="429" width="320" height="164" rx="8" fill="#000" opacity=".22"/>
+  <rect x="408" y="422" width="320" height="164" rx="8" fill="#12161f" stroke="#7aa2ff" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="408" y="422" width="4" height="164" rx="2" fill="#7aa2ff" opacity=".9"/>
+</g>
+<text x="428" y="452" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#7aa2ff"   letter-spacing="1.4" >02 / INJECTOR</text>
+<text x="428" y="480" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#e6e9f0" font-weight="700"   >one source file</text>
+<text x="428" y="506" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#4ade80"    >list_files · read_file · patch_source</text>
+<text x="428" y="526" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >denies patch_tests, git_push,</text>
+<text x="428" y="542" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >run_tests, run_status</text>
+<text x="428" y="568" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#e6e9f0"    >never touches a test file</text>
+
+<g>
+  <rect x="764" y="429" width="320" height="164" rx="8" fill="#000" opacity=".22"/>
+  <rect x="760" y="422" width="320" height="164" rx="8" fill="#12161f" stroke="#4ade80" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="760" y="422" width="4" height="164" rx="2" fill="#4ade80" opacity=".9"/>
+</g>
+<text x="780" y="452" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ade80"   letter-spacing="1.4" >03 / VERIFIER</text>
+<text x="780" y="480" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#e6e9f0" font-weight="700"   >runs the proof</text>
+<text x="780" y="506" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#4ade80"    >run_tests · run_status · git_diff</text>
+<text x="780" y="526" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >denies patch_source, patch_tests,</text>
+<text x="780" y="542" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >git_push</text>
+<text x="780" y="568" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#e6e9f0"    >clean pass / bugged fail / fix pass</text>
+
+<line x1="376" y1="470" x2="404" y2="470" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+<line x1="728" y1="470" x2="756" y2="470" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+
+<g>
+  <rect x="1116" y="429" width="344" height="164" rx="8" fill="#000" opacity=".22"/>
+  <rect x="1112" y="422" width="344" height="164" rx="8" fill="#12161f" stroke="#f5a524" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="1112" y="422" width="4" height="164" rx="2" fill="#f5a524" opacity=".9"/>
+</g>
+<text x="1132" y="452" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f5a524"   letter-spacing="1.6" >TOOLGATEWAY</text>
+<text x="1132" y="480" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#e6e9f0" font-weight="700"   >the only path</text>
+<text x="1132" y="506" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#e6e9f0"    >static role list</text>
+<text x="1132" y="526" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#e6e9f0"    >intent tokens + ArmorIQ invoke</text>
+<text x="1132" y="548" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#f87171"    >fails closed on any error</text>
+<text x="1132" y="570" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >hash-only audit rows</text>
+
+<g>
+  <rect x="1492" y="429" width="376" height="164" rx="8" fill="#000" opacity=".22"/>
+  <rect x="1488" y="422" width="376" height="164" rx="8" fill="#12161f" stroke="#7aa2ff" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="1488" y="422" width="4" height="164" rx="2" fill="#7aa2ff" opacity=".9"/>
+</g>
+<text x="1508" y="452" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#7aa2ff"   letter-spacing="1.6" >ARMORIQ POLICY</text>
+<text x="1508" y="480" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#e6e9f0" font-weight="700"   >three role policies</text>
+<text x="1508" y="506" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#e6e9f0"    >planner · injector · verifier</text>
+<text x="1508" y="528" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#e6e9f0"    >allow + deny per role</text>
+<text x="1508" y="550" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#98a2b3"    >intent TTL 300s · CSRG required</text>
+<text x="1508" y="570" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#7aa2ff"    >governs every tool call</text>
+
+<line x1="1080" y1="504" x2="1108" y2="504" stroke="#f5a524" stroke-width="1.4"  marker-end="url(#arrow)"/>
+<line x1="1456" y1="504" x2="1484" y2="504" stroke="#5c6779" stroke-width="1.4" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+<text x="1459" y="495" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#98a2b3"    >policy</text>
+
+<g>
+  <rect x="1116" y="623" width="344" height="106" rx="8" fill="#000" opacity=".22"/>
+  <rect x="1112" y="616" width="344" height="106" rx="8" fill="#12161f" stroke="#354055" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="1112" y="616" width="4" height="106" rx="2" fill="#354055" opacity=".9"/>
+</g>
+<text x="1132" y="644" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#e6e9f0"   letter-spacing="1.4" >WORKSPACE MCP</text>
+<text x="1132" y="672" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#e6e9f0" font-weight="700"   >JSON-RPC over SSE</text>
+<text x="1132" y="696" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#98a2b3"    >bearer + HMAC session signature</text>
+<text x="1132" y="712" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#98a2b3"    >safe list · read · patch · test runs</text>
+
+<g>
+  <rect x="1492" y="623" width="376" height="106" rx="8" fill="#000" opacity=".22"/>
+  <rect x="1488" y="616" width="376" height="106" rx="8" fill="#12161f" stroke="#354055" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="1488" y="616" width="4" height="106" rx="2" fill="#354055" opacity=".9"/>
+</g>
+<text x="1508" y="644" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#e6e9f0"   letter-spacing="1.4" >DOCKER SANDBOX</text>
+<text x="1508" y="672" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#e6e9f0" font-weight="700"   >locked-down runs</text>
+<text x="1508" y="696" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#98a2b3"    >project suite · dependency cache</text>
+<text x="1508" y="712" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#98a2b3"    >no network · no host writes</text>
+
+<line x1="1284" y1="586" x2="1284" y2="612" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+<line x1="1456" y1="669" x2="1484" y2="669" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+<line x1="1112" y1="669" x2="1084" y2="602" stroke="#f5a524" stroke-width="1.4" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+
+<text x="56" y="760" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f5a524"   letter-spacing="2" >PLANE 03 / LEARNER + PROOF</text>
+<text x="1864" y="760" font-family="Consolas, 'Courier New', monospace" font-size="9.5" fill="#98a2b3"  text-anchor="end" letter-spacing="1.2" >THE SANDBOX IS TEMPORARY / THE RECEIPT IS NOT</text>
+
+<g>
+  <rect x="60" y="787" width="300" height="132" rx="8" fill="#000" opacity=".22"/>
+  <rect x="56" y="780" width="300" height="132" rx="8" fill="#12161f" stroke="#f5a524" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="56" y="780" width="4" height="132" rx="2" fill="#f5a524" opacity=".9"/>
+</g>
+<text x="76" y="810" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f5a524"   letter-spacing="1.4" >BROWSER UI</text>
+<text x="76" y="838" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#e6e9f0" font-weight="700"   >file tree + editor</text>
+<text x="76" y="862" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#e6e9f0"    >hints · check · proof</text>
+<text x="76" y="886" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >127.0.0.1:8000</text>
+
+<g>
+  <rect x="396" y="787" width="300" height="132" rx="8" fill="#000" opacity=".22"/>
+  <rect x="392" y="780" width="300" height="132" rx="8" fill="#12161f" stroke="#4ade80" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="392" y="780" width="4" height="132" rx="2" fill="#4ade80" opacity=".9"/>
+</g>
+<text x="412" y="810" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ade80"   letter-spacing="1.4" >CHECK MY FIX</text>
+<text x="412" y="838" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#e6e9f0" font-weight="700"   >save → run suite</text>
+<text x="412" y="862" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#e6e9f0"    >tests and config locked</text>
+<text x="412" y="886" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#4ade80"    >exit 0 · 0 failed · 6 passed</text>
+
+<g>
+  <rect x="732" y="787" width="340" height="132" rx="8" fill="#000" opacity=".22"/>
+  <rect x="728" y="780" width="340" height="132" rx="8" fill="#12161f" stroke="#f5a524" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="728" y="780" width="4" height="132" rx="2" fill="#f5a524" opacity=".9"/>
+</g>
+<text x="748" y="810" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f5a524"   letter-spacing="1.4" >PROOF</text>
+<text x="748" y="838" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#e6e9f0" font-weight="700"   >39 allowed / 1 blocked</text>
+<text x="748" y="862" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#e6e9f0"    >40 recorded · 1/3 hints</text>
+<text x="748" y="886" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >tests untouched · solved yes</text>
+
+<g>
+  <rect x="1108" y="787" width="350" height="132" rx="8" fill="#000" opacity=".22"/>
+  <rect x="1104" y="780" width="350" height="132" rx="8" fill="#12161f" stroke="#7aa2ff" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="1104" y="780" width="4" height="132" rx="2" fill="#7aa2ff" opacity=".9"/>
+</g>
+<text x="1124" y="810" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#7aa2ff"   letter-spacing="1.4" >EVIDENCE</text>
+<text x="1124" y="838" font-family="Consolas, 'Courier New', monospace" font-size="15" fill="#e6e9f0" font-weight="700"   >job eda725ba13dbeb33</text>
+<text x="1124" y="862" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#98a2b3"    >challenge 3254bf3c2e98dbe5</text>
+<text x="1124" y="886" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >hash-only audit · 2h TTL</text>
+
+<g>
+  <rect x="1494" y="787" width="374" height="132" rx="8" fill="#000" opacity=".22"/>
+  <rect x="1490" y="780" width="374" height="132" rx="8" fill="#12161f" stroke="#354055" stroke-opacity=".58" stroke-width="1.2"/>
+  <rect x="1490" y="780" width="4" height="132" rx="2" fill="#354055" opacity=".9"/>
+</g>
+<text x="1510" y="810" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#e6e9f0"   letter-spacing="1.4" >BOUNDARY</text>
+<text x="1510" y="838" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#e6e9f0" font-weight="700"   >local demo</text>
+<text x="1510" y="862" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#e6e9f0"    >no hosted endpoint claimed</text>
+<text x="1510" y="886" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#98a2b3"    >captured run, not a mock</text>
+
+<line x1="356" y1="846" x2="388" y2="846" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+<line x1="692" y1="846" x2="724" y2="846" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+<line x1="1068" y1="846" x2="1100" y2="846" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+<line x1="1454" y1="846" x2="1486" y2="846" stroke="#5c6779" stroke-width="1.4"  marker-end="url(#arrow)"/>
+
+<line x1="56" y1="944" x2="1864" y2="944" stroke="#354055" stroke-opacity=".55"/>
+<text x="56" y="970" font-family="Consolas, 'Courier New', monospace" font-size="9.5" fill="#f5a524"   letter-spacing="1.6" >MEASURED IN THE CAPTURED RUN</text>
+<text x="56" y="994" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#e6e9f0"    >mjhea0/flaskr-tdd · 1 failed, 5 passed → 0 failed, 6 passed · 39 allowed / 1 denied / 40 recorded · 1/3 hints · solved yes</text>
+<text x="56" y="1018" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#98a2b3"    >planted file project/app.py:86 · reference fix: flash("You were logged in") · tests untouched yes</text>
+<text x="1864" y="1046" font-family="Consolas, 'Courier New', monospace" font-size="9.5" fill="#5c6779"  text-anchor="end" letter-spacing="1.4" >SIDDHESHK / VILLAGE WORKSHOP</text>
+</svg>

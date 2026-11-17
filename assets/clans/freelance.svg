@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Freelance developer">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe98a"/>
+      <stop offset=".55" stop-color="#ffc83a"/>
+      <stop offset="1" stop-color="#e79a18"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" fill="url(#g)"/>
+  <rect x="9" y="15" width="46" height="34" rx="5" fill="#1b2c55"/>
+  <rect x="9" y="15" width="46" height="7" rx="5" fill="#22376a"/>
+  <circle cx="14" cy="18.5" r="1.4" fill="#8db6ff"/>
+  <circle cx="19" cy="18.5" r="1.4" fill="#8db6ff"/>
+  <circle cx="24" cy="18.5" r="1.4" fill="#8db6ff"/>
+  <path d="M21 29l-5 5 5 5" fill="none" stroke="#ffe27a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M43 29l5 5-5 5" fill="none" stroke="#ffe27a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M36 26l-8 16" fill="none" stroke="#8db6ff" stroke-width="3" stroke-linecap="round"/>
+  <rect x="14" y="54" width="36" height="3" rx="1.5" fill="#1b2c55" opacity=".65"/>
+</svg>

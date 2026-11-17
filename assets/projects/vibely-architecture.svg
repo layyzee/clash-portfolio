@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2b2721" fill-opacity=".55"/></marker>
+    <marker id="arrowCoral" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#cd4b30"/></marker>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r=".8" fill="#211d19" fill-opacity=".09"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#efe8da"/>
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+  <rect x="20" y="20" width="1880" height="1040" fill="none" stroke="#2b2721" stroke-opacity=".28"/>
+
+  <text x="56" y="58" font-family="Consolas, 'Courier New', monospace" font-size="11" letter-spacing="2.2" fill="#cd4b30">WORKSHOP / SYSTEM ARCHITECTURE</text>
+  <text x="1864" y="58" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="11" letter-spacing="2" fill="#6d6458">VIBELY / 2026</text>
+  <line x1="56" y1="74" x2="1864" y2="74" stroke="#2b2721" stroke-opacity=".25"/>
+
+  <text x="56" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="43" font-weight="700" letter-spacing="-.5" fill="#211d19">CLOSED VOCABULARY,</text>
+  <text x="56" y="163" font-family="Georgia, 'Times New Roman', serif" font-size="43" font-style="italic" fill="#cd4b30">open choreography.</text>
+  <text x="700" y="112" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#6d6458">Six planes, one page. The model writes the sections.</text>
+  <text x="700" y="135" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#6d6458">The scroll engine is fixed before a model is ever called.</text>
+
+  <g>
+    <text x="1864" y="100" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="36" fill="#211d19">28</text>
+    <text x="1864" y="119" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="9.4" letter-spacing="1.1" fill="#6d6458">INTENT IDS / 27 + NONE</text>
+    <line x1="1650" y1="132" x2="1864" y2="132" stroke="#2b2721" stroke-opacity=".25"/>
+    <text x="1650" y="151" font-family="Consolas, 'Courier New', monospace" font-size="9.4" letter-spacing="1.1" fill="#6d6458">ONE HTML DOC / TWO EXPORTS</text>
+  </g>
+
+  <line x1="616" y1="342" x2="674" y2="342" stroke="#2b2721" stroke-opacity=".55" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="1246" y1="342" x2="1304" y2="342" stroke="#2b2721" stroke-opacity=".55" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="1590" y1="498" x2="1590" y2="516" stroke="#2b2721" stroke-opacity=".55" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="1304" y1="672" x2="1246" y2="672" stroke="#2b2721" stroke-opacity=".55" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="674" y1="672" x2="616" y2="672" stroke="#2b2721" stroke-opacity=".55" stroke-width="1.3" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="56" y="190" width="548" height="304" rx="4" fill="#f7f1e6" fill-opacity=".66" stroke="#2b2721" stroke-opacity=".35"/>
+    <rect x="56" y="190" width="4" height="304" fill="#cd4b30"/>
+    <text x="82" y="221" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#cd4b30">PLANE 01</text>
+    <text x="82" y="250" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#211d19">CLIENT / COMPOSER</text>
+    <text x="82" y="276" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#6d6458">One brief. One visible run.</text>
+    <line x1="82" y1="292" x2="578" y2="292" stroke="#2b2721" stroke-opacity=".18"/>
+    <text x="82" y="310" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#a79c8a">OWNS</text>
+    <text x="84" y="329" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">prompt + style preset + model + optional image</text><text x="84" y="363" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">per-stage progress and per-section status</text><text x="84" y="397" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">one-section regenerate; export actions</text>
+    <g><rect x="82" y="430" width="73" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="118.5" y="445" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">REACT 19</text></g><g><rect x="162" y="430" width="115" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="219.5" y="445" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">TANSTACK START</text></g><g><rect x="284" y="430" width="59" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="313.5" y="445" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">VITE 8</text></g><g><rect x="350" y="430" width="39" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="369.5" y="445" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">ZOD</text></g>
+    <text x="82" y="476" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-style="italic" fill="#6d6458">runToken makes stale runs unable to overwrite newer results.</text>
+  </g>
+<g>
+    <rect x="686" y="190" width="548" height="304" rx="4" fill="#f7f1e6" fill-opacity=".66" stroke="#2b2721" stroke-opacity=".35"/>
+    <rect x="686" y="190" width="4" height="304" fill="#cd4b30"/>
+    <text x="712" y="221" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#cd4b30">PLANE 02</text>
+    <text x="712" y="250" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#211d19">PLANNING</text>
+    <text x="712" y="276" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#6d6458">Theme and structure decided once.</text>
+    <line x1="712" y1="292" x2="1208" y2="292" stroke="#2b2721" stroke-opacity=".18"/>
+    <text x="712" y="310" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#a79c8a">OWNS</text>
+    <text x="714" y="329" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">PageBlueprint: meta, tone, theme, 3-8 sections</text><text x="714" y="363" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">one schema-checked AnimationSpec per section</text><text x="714" y="397" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">CopyDoc: real copy for every section, reconciled</text>
+    <g><rect x="712" y="430" width="197" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="810.5" y="445" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">GEMINI / GROQ / OPENROUTER</text></g><g><rect x="916" y="430" width="80" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="956" y="445" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">JSON MODE</text></g><g><rect x="1003" y="430" width="39" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="1022.5" y="445" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">ZOD</text></g>
+    <text x="712" y="476" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-style="italic" fill="#6d6458">Clamp, reconcile and R1-R7 auto-correct; they do not reject.</text>
+  </g>
+<g>
+    <rect x="1316" y="190" width="548" height="304" rx="4" fill="#f7f1e6" fill-opacity=".66" stroke="#2b2721" stroke-opacity=".35"/>
+    <rect x="1316" y="190" width="4" height="304" fill="#cd4b30"/>
+    <text x="1342" y="221" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#cd4b30">PLANE 03</text>
+    <text x="1342" y="250" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#211d19">SECTION GENERATION</text>
+    <text x="1342" y="276" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#6d6458">N small calls, not one fragile page.</text>
+    <line x1="1342" y1="292" x2="1838" y2="292" stroke="#2b2721" stroke-opacity=".18"/>
+    <text x="1342" y="310" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#a79c8a">OWNS</text>
+    <text x="1344" y="329" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">one server call per section: HTML, CSS, JS</text><text x="1344" y="363" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">contract card for that section's intent only</text><text x="1344" y="397" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">real copy verbatim; neighbour kind hints</text>
+    <g><rect x="1342" y="430" width="80" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="1382" y="445" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">P-LIMIT 3</text></g><g><rect x="1429" y="430" width="128" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="1493" y="445" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">DELIMITED BLOCKS</text></g><g><rect x="1564" y="430" width="39" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="1583.5" y="445" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">LLM</text></g>
+    <text x="1342" y="476" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-style="italic" fill="#6d6458">Latency is close to one call; a failure stays local.</text>
+  </g>
+<g>
+    <rect x="1316" y="520" width="548" height="304" rx="4" fill="#f7f1e6" fill-opacity=".66" stroke="#2b2721" stroke-opacity=".35"/>
+    <rect x="1316" y="520" width="4" height="304" fill="#cd4b30"/>
+    <text x="1342" y="551" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#cd4b30">PLANE 04</text>
+    <text x="1342" y="580" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#211d19">VALIDATION / REPAIR</text>
+    <text x="1342" y="606" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#6d6458">Every module earns its place.</text>
+    <line x1="1342" y1="622" x2="1838" y2="622" stroke="#2b2721" stroke-opacity=".18"/>
+    <text x="1342" y="640" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#a79c8a">OWNS</text>
+    <text x="1344" y="659" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">HTML root + banned tags; parse-only JS</text><text x="1344" y="693" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">CSS scoped to .s-{id}; no CSS-hidden states</text><text x="1344" y="727" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">one repair with the exact error, then fallback</text>
+    <g><rect x="1342" y="760" width="108" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="1396" y="775" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">PARSE-ONLY JS</text></g><g><rect x="1457" y="760" width="80" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="1497" y="775" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">CSS SCOPE</text></g><g><rect x="1544" y="760" width="73" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="1580.5" y="775" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">1 REPAIR</text></g>
+    <text x="1342" y="806" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-style="italic" fill="#6d6458">origin is generated, repaired or fallback. No section sinks the page.</text>
+  </g>
+<g>
+    <rect x="686" y="520" width="548" height="304" rx="4" fill="#f7f1e6" fill-opacity=".66" stroke="#2b2721" stroke-opacity=".35"/>
+    <rect x="686" y="520" width="4" height="304" fill="#cd4b30"/>
+    <text x="712" y="551" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#cd4b30">PLANE 05</text>
+    <text x="712" y="580" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#211d19">ASSEMBLY / RUNTIME</text>
+    <text x="712" y="606" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#6d6458">The fragile engine is fixed.</text>
+    <line x1="712" y1="622" x2="1208" y2="622" stroke="#2b2721" stroke-opacity=".18"/>
+    <text x="712" y="640" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#a79c8a">OWNS</text>
+    <text x="714" y="659" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">deterministic shell: fonts, reset, theme tokens</text><text x="714" y="693" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">Lenis, gsap.ticker, ScrollTrigger.refresh, errors</text><text x="714" y="727" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">registry + gsap.context; reduced motion skips init</text>
+    <g><rect x="712" y="760" width="53" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="738.5" y="775" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">LENIS</text></g><g><rect x="772" y="760" width="46" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="795" y="775" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">GSAP</text></g><g><rect x="825" y="760" width="108" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="879" y="775" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">SCROLLTRIGGER</text></g>
+    <text x="712" y="806" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-style="italic" fill="#6d6458">27 animated intents + none. The model never writes the engine.</text>
+  </g>
+<g>
+    <rect x="56" y="520" width="548" height="304" rx="4" fill="#f7f1e6" fill-opacity=".66" stroke="#2b2721" stroke-opacity=".35"/>
+    <rect x="56" y="520" width="4" height="304" fill="#cd4b30"/>
+    <text x="82" y="551" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#cd4b30">PLANE 06</text>
+    <text x="82" y="580" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#211d19">PREVIEW / EXPORT</text>
+    <text x="82" y="606" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#6d6458">One page, two real exports.</text>
+    <line x1="82" y1="622" x2="578" y2="622" stroke="#2b2721" stroke-opacity=".18"/>
+    <text x="82" y="640" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#a79c8a">OWNS</text>
+    <text x="84" y="659" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">sandbox=&quot;allow-scripts&quot; iframe: opaque origin</text><text x="84" y="693" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">full srcdoc swap on every new bundle</text><text x="84" y="727" font-family="Arial, Helvetica, sans-serif" font-size="14.6" fill="#211d19">full source .zip or one portable .html</text>
+    <g><rect x="82" y="760" width="115" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="139.5" y="775" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">SANDBOX IFRAME</text></g><g><rect x="204" y="760" width="59" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="233.5" y="775" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">SRCDOC</text></g><g><rect x="270" y="760" width="115" height="22" rx="11" fill="none" stroke="#2b2721" stroke-opacity="0.45"/><text x="327.5" y="775" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.3" letter-spacing=".5" fill="#6d6458">STORE-ONLY ZIP</text></g>
+    <text x="82" y="806" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-style="italic" fill="#6d6458">No accounts, no history. Every generation is ephemeral.</text>
+  </g>
+
+  <line x1="56" y1="844" x2="1864" y2="844" stroke="#2b2721" stroke-opacity=".28"/>
+  <text x="206.66666666666666" y="904" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".7" fill="#6d6458"><tspan x="206.66666666666666" dy="0">ONE SENTENCE</tspan></text><line x1="344.3333333333333" y1="900" x2="366.3333333333333" y2="900" stroke="#cd4b30" stroke-width="1.3" marker-end="url(#arrowCoral)"/><text x="508" y="904" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".7" fill="#6d6458"><tspan x="508" dy="0">THEME + BLUEPRINT</tspan></text><line x1="645.6666666666666" y1="900" x2="667.6666666666666" y2="900" stroke="#cd4b30" stroke-width="1.3" marker-end="url(#arrowCoral)"/><text x="809.3333333333333" y="904" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".7" fill="#6d6458"><tspan x="809.3333333333333" dy="0">N SECTION MODULES</tspan></text><line x1="947" y1="900" x2="969" y2="900" stroke="#cd4b30" stroke-width="1.3" marker-end="url(#arrowCoral)"/><text x="1110.6666666666665" y="904" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".7" fill="#6d6458"><tspan x="1110.6666666666665" dy="0">GENERATED / REPAIRED /</tspan><tspan x="1110.6666666666665" dy="12">FALLBACK</tspan></text><line x1="1248.3333333333333" y1="900" x2="1270.3333333333333" y2="900" stroke="#cd4b30" stroke-width="1.3" marker-end="url(#arrowCoral)"/><text x="1412" y="904" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".7" fill="#6d6458"><tspan x="1412" dy="0">ONE HTML DOC</tspan></text><line x1="1549.6666666666665" y1="900" x2="1571.6666666666665" y2="900" stroke="#cd4b30" stroke-width="1.3" marker-end="url(#arrowCoral)"/><text x="1713.3333333333333" y="904" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".7" fill="#6d6458"><tspan x="1713.3333333333333" dy="0">PREVIEW / ZIP / HTML</tspan></text>
+
+  <g>
+    <rect x="56" y="930" width="1130" height="92" rx="3" fill="#211d19"/>
+    <text x="78" y="954" font-family="Consolas, 'Courier New', monospace" font-size="9.5" letter-spacing="1.5" fill="#e89982">HARD BOUNDARY</text>
+    <text x="78" y="978" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#f1e9db">Lenis, gsap.ticker, ScrollTrigger.refresh and plugin registration are harness-owned.</text>
+    <text x="78" y="1000" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#f1e9db">Generated JS that touches them is rejected by lint, not accommodated.</text>
+  </g>
+  <g>
+    <rect x="1206" y="930" width="658" height="92" rx="3" fill="none" stroke="#2b2721" stroke-opacity=".45"/>
+    <text x="1228" y="954" font-family="Consolas, 'Courier New', monospace" font-size="9.5" letter-spacing="1.5" fill="#cd4b30">RE-ENTRY</text>
+    <text x="1228" y="978" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#211d19">Regenerate one section: one codegen call, one validation pass,</text>
+    <text x="1228" y="1000" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#211d19">then re-assemble the whole page. The other modules stay put.</text>
+  </g>
+  <text x="56" y="1052" font-family="Consolas, 'Courier New', monospace" font-size="8.8" letter-spacing="1.2" fill="#a79c8a">SOURCES: VIBELY CODE + VERIFIED LIVE RUN · COFFEE PAGE IS GENERATED DEMO COPY · NO INVENTED SYSTEM METRICS</text>
+</svg>

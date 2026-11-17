@@ -1,0 +1,334 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Clockwork system architecture. Triggers wake a Strands agent through run_agent: a client writes in through the public intake form, the freelancer pastes a client reply into a conversation, or a scheduler tick runs every 30 seconds locally and every 5 minutes on Vercel through a GitHub Action. The freelancer's buttons call the same twelve tools directly without the agent loop, and both paths open an agent run. Job feeds from Hacker News, Remotive and RemoteOK, plus the freelancer's GitHub and portfolio, are read by those tools. Models route by role on Groq through LiteLLM: orchestrator and reader use gpt-oss-120b, writer and extractor use gpt-oss-20b. Supabase Postgres holds accounts, profile, sourcing, conversations, deals, quotes, invoices, approvals, tasks and the full run ledger. Every step, tool call, token count and cost is written to agent_event and token_ledger and replayed in the Run Trace. Approval-gated tools have no code path that sends: they write a pending approval row, a human approves in the Approval Inbox, and only then does executor.py record the action as sent. No email is transmitted. The money tail runs quote, human acceptance, invoice, a scheduled payment check, an escalating chase, and human confirmation of payment; totals are computed in Python and no step can move money. A virtual clock routes every time read through clock.now so a demo can advance days in seconds.">
+  <defs>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.15" fill="#c9bda5" opacity=".42"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b665f"/>
+    </marker>
+    <marker id="arrowAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c2410c"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <style>
+      .tag { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 3.4px; fill: #8a7a5c; }
+      .title { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 52px; font-weight: 700; fill: #1e2724; letter-spacing: -1.1px; }
+      .subtitle { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 17px; fill: #5b665f; }
+      .plane-label { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; fill: #6b6253; }
+      .plane-sub { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 11px; fill: #8b8170; }
+      .plane-label-light { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; fill: #9fb0a6; }
+      .plane-sub-light { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 11px; fill: #7f9187; }
+      .card-title { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 14.5px; font-weight: 700; fill: #1e2724; }
+      .card-sub { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 11.2px; fill: #5b665f; }
+      .card-title-dark { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 14.5px; font-weight: 700; fill: #f4efe4; }
+      .card-sub-dark { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 11px; fill: #a7b8ae; }
+      .mono { font-family: 'Cascadia Mono', 'Consolas', monospace; font-size: 10.4px; fill: #5b665f; }
+      .mono-dark { font-family: 'Cascadia Mono', 'Consolas', monospace; font-size: 10.2px; fill: #b9c9c0; }
+      .tiny { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 10.6px; fill: #7b7161; }
+      .tiny-dark { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 9.8px; fill: #8fa398; }
+      .stat-num { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #1e2724; }
+      .stat-lbl { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 9.5px; font-weight: 700; letter-spacing: 1.4px; fill: #8a7a5c; }
+      .chip { font-family: 'Cascadia Mono', 'Consolas', monospace; font-size: 10.2px; fill: #3e4a44; }
+      .flow { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 700; fill: #8a7a5c; letter-spacing: .6px; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#f7f2e7"/>
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+  <rect x="20" y="20" width="1880" height="1040" rx="20" fill="none" stroke="#2a332e" stroke-width="2" opacity=".55"/>
+  <rect x="27" y="27" width="1866" height="1026" rx="16" fill="none" stroke="#2a332e" stroke-width="1" opacity=".16"/>
+
+  <!-- header -->
+  <text x="64" y="56" class="tag">WORKSHOP / 04 / CLOCKWORK / SYSTEM ARCHITECTURE</text>
+  <text x="62" y="122" class="title">Clockwork — the business half, as a system</text>
+  <text x="64" y="156" class="subtitle">A Strands agent on Groq, four workflows, twelve tools, and a human approval gate. Arithmetic stays in code.</text>
+
+  <g>
+    <rect x="1296" y="44" width="128" height="72" rx="9" fill="#fffdf7" stroke="#d8cdb8"/>
+    <text x="1312" y="72" class="stat-num">59</text>
+    <text x="1312" y="92" class="stat-lbl">SOURCED</text>
+    <text x="1312" y="106" class="tiny" font-size="8.7">HN · Remotive · RemoteOK</text>
+
+    <rect x="1434" y="44" width="128" height="72" rx="9" fill="#fffdf7" stroke="#d8cdb8"/>
+    <text x="1450" y="72" class="stat-num">30/30</text>
+    <text x="1450" y="92" class="stat-lbl">LINKS LIVE</text>
+    <text x="1450" y="106" class="tiny" font-size="8.7">checked before scoring</text>
+
+    <rect x="1572" y="44" width="128" height="72" rx="9" fill="#fffdf7" stroke="#d8cdb8"/>
+    <text x="1588" y="72" class="stat-num">4</text>
+    <text x="1588" y="92" class="stat-lbl">SCORED</text>
+    <text x="1588" y="106" class="tiny" font-size="8.7">fit 80 · 55 · 20 · 20</text>
+
+    <rect x="1710" y="44" width="146" height="72" rx="9" fill="#fde8d7" stroke="#c2410c"/>
+    <text x="1726" y="72" class="stat-num">160</text>
+    <text x="1726" y="92" class="stat-lbl">TESTS PASS</text>
+    <text x="1726" y="106" class="tiny" font-size="8.7">stdlib · 0.096s</text>
+  </g>
+  <text x="1856" y="142" text-anchor="end" class="chip" fill="#8a7a5c">LIVE DEMO · 4 NOV 2026 · 18 RUNS · $0.0071 AI COST</text>
+
+  <line x1="64" y1="184" x2="1856" y2="184" stroke="#c7bda9" stroke-width="1.4"/>
+
+  <!-- ===== LEFT: TRIGGERS + INPUTS ===== -->
+  <g>
+    <rect x="64" y="208" width="452" height="480" rx="14" fill="#fffdf7" stroke="#d8cdb8" stroke-width="1.5"/>
+    <text x="86" y="238" class="plane-label">TRIGGERS + INPUTS</text>
+    <text x="86" y="256" class="plane-sub">what wakes the agent, and what it reads</text>
+
+    <rect x="86" y="274" width="200" height="58" rx="8" fill="#fbf7ee" stroke="#d8cdb8"/>
+    <text x="100" y="298" class="card-title">Client writes in</text>
+    <text x="100" y="316" class="card-sub">public intake form</text>
+
+    <rect x="298" y="274" width="196" height="58" rx="8" fill="#fbf7ee" stroke="#d8cdb8"/>
+    <text x="312" y="298" class="card-title">You paste a reply</text>
+    <text x="312" y="316" class="card-sub">on a conversation</text>
+
+    <rect x="86" y="346" width="408" height="70" rx="8" fill="#fde8d7" stroke="#c2410c" stroke-width="1.6"/>
+    <text x="100" y="370" class="card-title">Scheduler tick</text>
+    <text x="100" y="388" class="card-sub">every 30s locally · every 5 min on Vercel</text>
+    <text x="100" y="404" class="mono" fill="#9a3412">GitHub Action → POST /tasks/tick · max 3 per call</text>
+
+    <rect x="86" y="430" width="408" height="62" rx="8" fill="#f4efe4" stroke="#c7bda9"/>
+    <text x="100" y="453" class="card-title">Your buttons</text>
+    <text x="100" y="470" class="card-sub">find leads · score · pitch · quote · invoice · chase</text>
+    <text x="100" y="484" class="mono" fill="#6b6253">call the same tools directly · no loop · still a run</text>
+
+    <rect x="86" y="506" width="200" height="70" rx="8" fill="#fbf7ee" stroke="#d8cdb8"/>
+    <text x="100" y="529" class="card-title">Job feeds</text>
+    <text x="100" y="546" class="card-sub">Hacker News · Remotive · RemoteOK</text>
+    <text x="100" y="562" class="tiny">each link checked before scoring</text>
+
+    <rect x="298" y="506" width="196" height="70" rx="8" fill="#fbf7ee" stroke="#d8cdb8"/>
+    <text x="312" y="529" class="card-title">Your work</text>
+    <text x="312" y="546" class="card-sub">GitHub + portfolio</text>
+    <text x="312" y="562" class="tiny">read once at setup</text>
+
+    <text x="86" y="604" class="tiny">No human present on a tick: check-ins wake the agent;</text>
+    <text x="86" y="620" class="tiny">payment checks call the chase code directly.</text>
+  </g>
+
+  <!-- arrows from triggers to agent plane -->
+  <path d="M516 303 L 548 303" stroke="#5b665f" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+  <path d="M494 461 L 522 461 L 522 438 L 548 438" stroke="#c2410c" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#arrowAccent)"/>
+  <text x="501" y="452" class="flow" fill="#c2410c">DIRECT</text>
+
+  <!-- ===== CENTER: AGENT PLANE ===== -->
+  <g>
+    <rect x="552" y="208" width="644" height="480" rx="14" fill="#18201d" stroke="#0f1512" stroke-width="1.5"/>
+    <text x="576" y="238" class="plane-label-light">AGENT PLANE</text>
+    <text x="576" y="256" class="plane-sub-light">one loop, twelve typed tools, structured output</text>
+
+    <rect x="576" y="274" width="208" height="62" rx="8" fill="#202a26" stroke="#3a4a43"/>
+    <text x="590" y="297" class="card-title-dark">run_agent()</text>
+    <text x="590" y="314" class="card-sub-dark">the full agent loop</text>
+    <text x="590" y="329" class="mono-dark">opens an agent_run</text>
+
+    <path d="M784 305 L 806 305" stroke="#9fb0a6" stroke-width="1.7" fill="none" marker-end="url(#arrow)"/>
+    <rect x="810" y="272" width="362" height="66" rx="8" fill="#202a26" stroke="#c2410c" stroke-width="1.5"/>
+    <text x="824" y="296" class="card-title-dark">Strands agent</text>
+    <text x="824" y="313" class="card-sub-dark">12 typed @tools · Pydantic structured output</text>
+    <text x="824" y="329" class="mono-dark" fill="#e8b48e">lifecycle hooks → audit · rate-limit retry</text>
+
+    <text x="576" y="370" class="plane-label-light" font-size="10.5">TOOLS — every call is audited</text>
+    <g class="mono-dark">
+      <rect x="576" y="382" width="184" height="26" rx="5" fill="#202a26" stroke="#35463e"/><text x="588" y="399">recall</text>
+      <rect x="770" y="382" width="184" height="26" rx="5" fill="#202a26" stroke="#35463e"/><text x="782" y="399">get_thread</text>
+      <rect x="964" y="382" width="184" height="26" rx="5" fill="#202a26" stroke="#35463e"/><text x="976" y="399">log_message</text>
+
+      <rect x="576" y="414" width="184" height="26" rx="5" fill="#202a26" stroke="#35463e"/><text x="588" y="431">extract_requirements</text>
+      <rect x="770" y="414" width="184" height="26" rx="5" fill="#202a26" stroke="#35463e"/><text x="782" y="431">qualify_lead</text>
+      <rect x="964" y="414" width="184" height="26" rx="5" fill="#202a26" stroke="#35463e"/><text x="976" y="431">draft_reply</text>
+
+      <rect x="576" y="446" width="184" height="26" rx="5" fill="#202a26" stroke="#35463e"/><text x="588" y="463">schedule_task</text>
+      <rect x="770" y="446" width="184" height="26" rx="5" fill="#202a26" stroke="#35463e"/><text x="782" y="463">score_fit</text>
+      <rect x="964" y="446" width="184" height="26" rx="5" fill="#202a26" stroke="#35463e"/><text x="976" y="463">draft_pitch</text>
+
+      <rect x="576" y="478" width="184" height="26" rx="5" fill="#202a26" stroke="#c2410c" stroke-width="1.2"/><text x="588" y="495" fill="#f0c4a8">draft_quote</text>
+      <rect x="770" y="478" width="184" height="26" rx="5" fill="#202a26" stroke="#c2410c" stroke-width="1.2"/><text x="782" y="495" fill="#f0c4a8">draft_invoice</text>
+      <rect x="964" y="478" width="184" height="26" rx="5" fill="#202a26" stroke="#c2410c" stroke-width="1.2"/><text x="976" y="495" fill="#f0c4a8">chase_payment</text>
+    </g>
+
+    <text x="576" y="530" class="plane-label-light" font-size="10.5">MODELS BY ROLE — Groq via LiteLLM</text>
+    <g>
+      <rect x="576" y="542" width="142" height="98" rx="7" fill="#202a26" stroke="#3a4a43"/>
+      <text x="588" y="562" class="stat-lbl" fill="#8fa398">ORCHESTRATOR</text>
+      <text x="588" y="582" class="mono-dark" fill="#f4efe4">gpt-oss-120b</text>
+      <text x="588" y="600" class="tiny-dark">runs the loop,</text>
+      <text x="588" y="614" class="tiny-dark">picks the tools</text>
+
+      <rect x="726" y="542" width="142" height="98" rx="7" fill="#202a26" stroke="#3a4a43"/>
+      <text x="738" y="562" class="stat-lbl" fill="#8fa398">READER</text>
+      <text x="738" y="582" class="mono-dark" fill="#f4efe4">gpt-oss-120b</text>
+      <text x="738" y="600" class="tiny-dark">reads GitHub</text>
+      <text x="738" y="614" class="tiny-dark">and the site</text>
+
+      <rect x="876" y="542" width="142" height="98" rx="7" fill="#202a26" stroke="#3a4a43"/>
+      <text x="888" y="562" class="stat-lbl" fill="#8fa398">WRITER</text>
+      <text x="888" y="582" class="mono-dark" fill="#f4efe4">gpt-oss-20b</text>
+      <text x="888" y="600" class="tiny-dark">pitch, reply,</text>
+      <text x="888" y="614" class="tiny-dark">quote, reminder</text>
+
+      <rect x="1026" y="542" width="142" height="98" rx="7" fill="#202a26" stroke="#3a4a43"/>
+      <text x="1038" y="562" class="stat-lbl" fill="#8fa398">EXTRACTOR</text>
+      <text x="1038" y="582" class="mono-dark" fill="#f4efe4">gpt-oss-20b</text>
+      <text x="1038" y="600" class="tiny-dark">score, qualify,</text>
+      <text x="1038" y="614" class="tiny-dark">requirements</text>
+    </g>
+    <text x="576" y="660" class="tiny-dark">Past the daily cap, the orchestrator drops to 20b — the trace records it.</text>
+  </g>
+
+  <!-- ===== RIGHT: STATE + EXPERIENCE ===== -->
+  <g>
+    <rect x="1220" y="208" width="636" height="480" rx="14" fill="#fffdf7" stroke="#d8cdb8" stroke-width="1.5"/>
+    <text x="1244" y="238" class="plane-label">STATE + EXPERIENCE</text>
+    <text x="1244" y="256" class="plane-sub">Postgres, the API, the app, and the clock</text>
+
+    <path d="M1196 305 L 1220 305" stroke="#5b665f" stroke-width="1.7" fill="none" marker-end="url(#arrow)"/>
+
+    <rect x="1244" y="272" width="368" height="190" rx="8" fill="#fbf7ee" stroke="#d8cdb8"/>
+    <text x="1258" y="294" class="card-title">Supabase Postgres</text>
+    <text x="1258" y="310" class="tiny">one workspace id scopes every row</text>
+
+    <g>
+      <rect x="1258" y="322" width="166" height="58" rx="6" fill="#f4efe4" stroke="#ddd2bd"/>
+      <text x="1268" y="338" class="stat-lbl" font-size="8.6">WORKSPACE</text>
+      <text x="1268" y="353" class="mono">account · profile</text>
+      <text x="1268" y="368" class="mono">source</text>
+
+      <rect x="1436" y="322" width="162" height="58" rx="6" fill="#f4efe4" stroke="#ddd2bd"/>
+      <text x="1446" y="338" class="stat-lbl" font-size="8.6">WORK</text>
+      <text x="1446" y="353" class="mono">opportunity · deal</text>
+      <text x="1446" y="368" class="mono">thread · message</text>
+
+      <rect x="1258" y="390" width="166" height="58" rx="6" fill="#f4efe4" stroke="#ddd2bd"/>
+      <text x="1268" y="406" class="stat-lbl" font-size="8.6">MONEY</text>
+      <text x="1268" y="421" class="mono">quote · invoice</text>
+      <text x="1268" y="436" class="mono">totals in Python</text>
+
+      <rect x="1436" y="390" width="162" height="58" rx="6" fill="#f4efe4" stroke="#ddd2bd"/>
+      <text x="1446" y="406" class="stat-lbl" font-size="8.6">RUNTIME</text>
+      <text x="1446" y="421" class="mono">approval · task</text>
+      <text x="1446" y="436" class="mono">agent_run · event</text>
+    </g>
+
+    <rect x="1632" y="272" width="204" height="190" rx="8" fill="#18201d" stroke="#0f1512"/>
+    <text x="1646" y="294" class="plane-label-light" font-size="9.5">RUN TRACE</text>
+    <text x="1646" y="314" class="card-title-dark" font-size="12.5">agent_event</text>
+    <text x="1646" y="330" class="mono-dark" fill="#e8b48e">+ token_ledger</text>
+    <text x="1646" y="352" class="tiny-dark">every step, tool call,</text>
+    <text x="1646" y="366" class="tiny-dark">token count and cost</text>
+    <text x="1646" y="388" class="tiny-dark">replayed live in Runs</text>
+    <line x1="1646" y1="404" x2="1822" y2="404" stroke="#35463e"/>
+    <text x="1646" y="424" class="mono-dark" fill="#7ee0c2">18 runs · 100% success</text>
+    <text x="1646" y="442" class="mono-dark">$0.0071 today</text>
+
+    <rect x="1244" y="478" width="276" height="88" rx="8" fill="#fbf7ee" stroke="#d8cdb8"/>
+    <text x="1258" y="500" class="card-title">Next.js app</text>
+    <text x="1258" y="518" class="card-sub">Overview · Workflows · Runs · Approvals</text>
+    <text x="1258" y="534" class="card-sub">Opportunities · Conversations · Money</text>
+    <text x="1258" y="550" class="mono">Settings · public intake</text>
+
+    <rect x="1536" y="478" width="300" height="88" rx="8" fill="#fbf7ee" stroke="#d8cdb8"/>
+    <text x="1550" y="500" class="card-title">FastAPI on Vercel</text>
+    <text x="1550" y="518" class="card-sub">cookie identity · intake · runs · money</text>
+    <text x="1550" y="534" class="card-sub">approvals · search · summary · clock</text>
+    <text x="1550" y="550" class="mono" fill="#0f766e">POST /tasks/tick · secret protected</text>
+
+    <rect x="1244" y="582" width="592" height="74" rx="8" fill="#e3f2ed" stroke="#0f766e"/>
+    <text x="1258" y="604" class="card-title" fill="#0f5f58">Scheduler + virtual clock</text>
+    <text x="1258" y="621" class="card-sub">GitHub Action every 5 minutes · local timer every 30 seconds</text>
+    <text x="1258" y="636" class="mono" fill="#0f766e">every time read goes through clock.now() · +3d / +7d in the UI</text>
+  </g>
+
+  <!-- ===== APPROVAL GATE ===== -->
+  <line x1="64" y1="716" x2="1856" y2="716" stroke="#c7bda9" stroke-width="1.4"/>
+  <text x="64" y="744" class="plane-label">APPROVAL GATE — enforced in code, not prompting</text>
+
+  <rect x="64" y="760" width="264" height="58" rx="8" fill="#fde8d7" stroke="#c2410c" stroke-width="1.4"/>
+  <text x="78" y="782" class="card-title">approval-gated tools</text>
+  <text x="78" y="799" class="card-sub">draft_pitch · draft_reply · draft_quote</text>
+  <text x="78" y="812" class="mono" fill="#9a3412">draft_invoice · chase_payment</text>
+
+  <path d="M328 789 L 350 789" stroke="#c2410c" stroke-width="1.9" fill="none" marker-end="url(#arrowAccent)"/>
+  <rect x="356" y="760" width="212" height="58" rx="8" fill="#fde8d7" stroke="#c2410c" stroke-width="1.4"/>
+  <text x="370" y="782" class="card-title">approval row</text>
+  <text x="370" y="799" class="card-sub">status: pending</text>
+  <text x="370" y="812" class="mono" fill="#9a3412">what · why · read · changes</text>
+
+  <path d="M568 789 L 590 789" stroke="#c2410c" stroke-width="1.9" fill="none" marker-end="url(#arrowAccent)"/>
+  <rect x="596" y="760" width="212" height="58" rx="8" fill="#fde8d7" stroke="#c2410c" stroke-width="1.6"/>
+  <text x="610" y="782" class="card-title">You</text>
+  <text x="610" y="799" class="card-sub">Approval Inbox</text>
+  <text x="610" y="812" class="mono" fill="#9a3412">approve · reject · edit</text>
+
+  <path d="M808 789 L 830 789" stroke="#c2410c" stroke-width="1.9" fill="none" marker-end="url(#arrowAccent)"/>
+  <text x="819" y="751" text-anchor="middle" class="flow" fill="#c2410c">ONLY ON APPROVE</text>
+  <rect x="836" y="760" width="226" height="58" rx="8" fill="#fbf7ee" stroke="#d8cdb8"/>
+  <text x="850" y="782" class="card-title">executor.py</text>
+  <text x="850" y="799" class="card-sub">records the action as sent</text>
+  <text x="850" y="812" class="mono">quotes and invoices arm a check-in</text>
+
+  <path d="M1062 789 L 1084 789" stroke="#0f766e" stroke-width="1.9" fill="none" marker-end="url(#arrowTeal)"/>
+  <rect x="1090" y="760" width="300" height="58" rx="8" fill="#e3f2ed" stroke="#0f766e" stroke-width="1.4"/>
+  <text x="1104" y="782" class="card-title" fill="#0f5f58">what actually leaves</text>
+  <text x="1104" y="799" class="card-sub">a sent record, in this demo</text>
+  <text x="1104" y="812" class="mono" fill="#0f766e">no email is transmitted yet</text>
+
+  <rect x="1420" y="760" width="436" height="58" rx="8" fill="#f4efe4" stroke="#c7bda9"/>
+  <text x="1436" y="781" class="card-sub">An approval-gated tool has no code path that sends.</text>
+  <text x="1436" y="798" class="card-sub">The executor acts only after a human decides.</text>
+  <text x="1436" y="812" class="mono" fill="#0f766e">result: 0 unapproved side effects</text>
+
+  <!-- ===== MONEY TAIL ===== -->
+  <line x1="64" y1="846" x2="1856" y2="846" stroke="#c7bda9" stroke-width="1.4"/>
+  <text x="64" y="872" class="plane-label">THE MONEY TAIL — totals in Python, decisions with a human</text>
+
+  <g>
+    <rect x="64" y="886" width="266" height="56" rx="8" fill="#fbf7ee" stroke="#d8cdb8"/>
+    <text x="78" y="907" class="card-title" font-size="13">draft_quote</text>
+    <text x="78" y="923" class="card-sub">line items from the model</text>
+    <text x="78" y="936" class="mono">total computed in Python</text>
+
+    <path d="M330 914 L 350 914" stroke="#5b665f" stroke-width="1.7" fill="none" marker-end="url(#arrow)"/>
+    <rect x="356" y="886" width="266" height="56" rx="8" fill="#fde8d7" stroke="#c2410c"/>
+    <text x="370" y="907" class="card-title" font-size="13">You: accepted?</text>
+    <text x="370" y="923" class="card-sub">human-only — no tool can record it</text>
+    <text x="370" y="936" class="mono" fill="#9a3412">client acceptance is a decision</text>
+
+    <path d="M622 914 L 642 914" stroke="#5b665f" stroke-width="1.7" fill="none" marker-end="url(#arrow)"/>
+    <rect x="648" y="886" width="266" height="56" rx="8" fill="#fbf7ee" stroke="#d8cdb8"/>
+    <text x="662" y="907" class="card-title" font-size="13">draft_invoice</text>
+    <text x="662" y="923" class="card-sub">refuses unless the quote is accepted</text>
+    <text x="662" y="936" class="mono">number + due date in Python</text>
+
+    <path d="M914 914 L 934 914" stroke="#5b665f" stroke-width="1.7" fill="none" marker-end="url(#arrow)"/>
+    <rect x="940" y="886" width="266" height="56" rx="8" fill="#fbf7ee" stroke="#d8cdb8"/>
+    <text x="954" y="907" class="card-title" font-size="13">payment check</text>
+    <text x="954" y="923" class="card-sub">scheduled after the due date</text>
+    <text x="954" y="936" class="mono">calls chase code directly</text>
+
+    <path d="M1206 914 L 1226 914" stroke="#5b665f" stroke-width="1.7" fill="none" marker-end="url(#arrow)"/>
+    <rect x="1232" y="886" width="266" height="56" rx="8" fill="#fde8d7" stroke="#c2410c"/>
+    <text x="1246" y="907" class="card-title" font-size="13">chase_payment</text>
+    <text x="1246" y="923" class="card-sub">tone escalates each time</text>
+    <text x="1246" y="936" class="mono" fill="#9a3412">chase_count increases on approve</text>
+
+    <path d="M1498 914 L 1518 914" stroke="#0f766e" stroke-width="1.7" fill="none" marker-end="url(#arrowTeal)"/>
+    <rect x="1524" y="886" width="332" height="56" rx="8" fill="#e3f2ed" stroke="#0f766e"/>
+    <text x="1538" y="907" class="card-title" font-size="13" fill="#0f5f58">You: paid</text>
+    <text x="1538" y="923" class="card-sub">cancels the chase task · closes the deal</text>
+    <text x="1538" y="936" class="mono" fill="#0f766e">no payment processor — no step moves money</text>
+  </g>
+
+  <!-- footer -->
+  <line x1="64" y1="966" x2="1856" y2="966" stroke="#c7bda9" stroke-width="1"/>
+  <text x="64" y="990" class="plane-label" font-size="10.5">OBSERVABILITY</text>
+  <text x="220" y="990" class="tiny">every step, tool call, token count and cost in agent_event + token_ledger · replayed live in Runs</text>
+  <text x="64" y="1012" class="plane-label" font-size="10.5">HONEST LIMITS</text>
+  <text x="220" y="1012" class="tiny">no email sent yet · no password · no payment processor · free-tier model limits can rate-limit a step</text>
+  <text x="64" y="1034" class="plane-label" font-size="10.5">PROOF</text>
+  <text x="220" y="1034" class="tiny">160 standard-library tests pass in 0.096s · 59 postings · 30/30 links live · 4 scored · quote USD 3,975 · invoice INV-0001</text>
+
+  <text x="1856" y="1034" text-anchor="end" class="chip" fill="#8a7a5c">clockwork-live.vercel.app</text>
+</svg>

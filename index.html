@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#7ecdf2" />
+  <meta name="application-name" content="Balaji Palani" />
+  <meta name="apple-mobile-web-app-title" content="Balaji" />
+  <meta name="author" content="Balaji Palani" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon-64.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/brand/site.webmanifest" />
+  <title>Balaji Palani — 3D Agile Citadel & Portfolio Village</title>
+  <meta name="description" content="Balaji Palani: Senior Scrum Master & Agile Delivery Lead with 7+ years experience. CSM® & SAFe® 6.0 certified. 0-day notice period. Explore the 3D portfolio village." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Balaji Palani" />
+  <meta property="og:title" content="Balaji Palani — Senior Scrum Master & Agile Delivery Lead" />
+  <meta property="og:description" content="Balaji Palani: Senior Scrum Master with 7+ years IT & Agile leadership. Explore the 3D Clash of Clans Agile Citadel." />
+  <link rel="canonical" href="https://siddhesh26.is-a.dev/" />
+  <meta property="og:url" content="https://siddhesh26.is-a.dev/" />
+  <meta property="og:image" content="https://siddhesh26.is-a.dev/assets/brand/og-cover.jpg" />
+  <meta property="og:image:secure_url" content="https://siddhesh26.is-a.dev/assets/brand/og-cover.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Balaji Palani, Senior Scrum Master, above his portfolio village island." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Balaji Palani — Senior Scrum Master & Agile Delivery Lead" />
+  <meta name="twitter:description" content="Balaji Palani: Senior Scrum Master with 7+ years IT & Agile leadership. Explore the 3D Clash of Clans Agile Citadel." />
+  <meta name="twitter:image" content="assets/brand/balaji-mark.svg" />
+  <meta name="twitter:image:alt" content="Balaji Palani, Senior Scrum Master, above his portfolio village island." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/dela-gothic-one.woff2" crossorigin />
+  <link rel="preload" as="image" href="assets/intro/village-loading-v2.webp" type="image/webp" />
+  <link rel="preload" as="image" href="assets/brand/balaji-mark.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="village-v2.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three.module.js",
+        "three/addons/": "./vendor/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <canvas id="scene" aria-label="A 3D village portfolio. Drag to pan, scroll to zoom, and tap buildings to explore."></canvas>
+
+    <div id="hud">
+      <button class="profile-chip clickable" id="profile-chip" aria-label="Open my profile">
+        <div class="level-crest" title="Level 7 Citadel · 7+ Years Experience"><span id="crest-level">7</span><small>LVL</small></div>
+        <div class="profile-copy">
+          <div class="player-name"><span id="player-name">BALAJI PALANI</span></div>
+          <div class="availability"><i></i><span id="availability-text">0-DAY NOTICE • IMMEDIATE JOINER</span></div>
+          <div class="xp"><i id="xp-fill"></i></div>
+        </div>
+      </button>
+
+      <div class="top-actions">
+        <div class="hud-gem-pill" id="hud-gem-pill" title="Village Gems · Tap Gem Box to collect!">
+          <span class="gem-icon">💎</span>
+          <b id="gem-count">750</b>
+        </div>
+        <a class="hud-pill-btn hud-resume-btn" id="resume-quick-btn" href="assets/Balaji_Palani_Senior_Scrum_Master_Resume.pdf" download="Balaji_Palani_Senior_Scrum_Master_Resume.pdf" title="Download ATS Resume PDF">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          <span>RESUME</span>
+        </a>
+        <button class="hud-pill-btn hud-connect-btn" id="connect-quick-btn" type="button" aria-label="Quick Connect" title="Contact Balaji Palani">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          <span>CONNECT</span>
+        </button>
+        <button class="icon-btn" id="sound-quick-btn" type="button" aria-label="Toggle Sound" title="Sound Mute/Unmute">
+          <svg id="sound-icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+          </svg>
+          <svg id="sound-icon-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+            <line x1="23" y1="9" x2="17" y2="15" />
+            <line x1="17" y1="9" x2="23" y2="15" />
+          </svg>
+        </button>
+        <button class="icon-btn" id="settings-btn" aria-label="Settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.2" />
+            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.09A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H3v-4h.09A1.7 1.7 0 0 0 4.6 8.6a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V3h4v.09A1.7 1.7 0 0 0 15.4 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.15.38.37.72.65 1 .3.28.68.42 1.1.4H21v4h-.09a1.7 1.7 0 0 0-1.51.6Z" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="cta-row">
+        <button class="ui-btn ui-btn-navy" id="tour-btn" aria-label="Take a tour">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5Z" /></svg>
+          TOUR
+        </button>
+      </div>
+
+      <div class="selection" id="selection">
+        <div class="sel-copy">
+          <div class="sel-name" id="sel-name">CLOCKWORK</div>
+          <div class="sel-level"><span id="sel-level">LVL. 5</span> · TAP INFO TO OPEN</div>
+        </div>
+        <div class="sel-actions">
+          <button class="mini-btn" id="sel-open" hidden>OPEN</button>
+          <button class="mini-btn gold" id="sel-info">INFO</button>
+        </div>
+      </div>
+
+      <div class="tooltip" id="tooltip" role="tooltip" aria-hidden="true"><b id="tt-name">Profile</b><small id="tt-sub">High agency / 0→1 mindset</small></div>
+    </div>
+
+    <!-- Guided tour: an original guide, his speech bubble and a building pin. -->
+    <div class="tour-pin" id="tour-pin" aria-hidden="true">
+      <span class="tour-pin-index" id="tour-pin-index">01</span>
+      <span class="tour-pin-copy"><b id="tour-pin-name">TOWN HALL</b><small id="tour-pin-sub">WHO AM I?</small></span>
+    </div>
+
+    <section class="tour-guide" id="tour-guide" aria-label="Guided village tour">
+      <div class="tour-character" aria-hidden="true">
+        <svg viewBox="0 22 280 273" role="presentation">
+        <defs>
+          <linearGradient id="tgSkin" gradientUnits="userSpaceOnUse" x1="140" y1="40" x2="140" y2="170">
+            <stop offset="0" stop-color="#f8cfac" />
+            <stop offset="0.4" stop-color="#f2bb95" />
+            <stop offset="0.76" stop-color="#e2a37e" />
+            <stop offset="1" stop-color="#d18f6b" />
+          </linearGradient>
+          <linearGradient id="tgHair" gradientUnits="userSpaceOnUse" x1="128" y1="30" x2="154" y2="104">
+            <stop offset="0" stop-color="#3f2a1a" />
+            <stop offset="0.42" stop-color="#2e1c12" />
+            <stop offset="0.78" stop-color="#22130b" />
+            <stop offset="1" stop-color="#1a0e08" />
+          </linearGradient>
+          <linearGradient id="tgHairHi" gradientUnits="userSpaceOnUse" x1="124" y1="38" x2="158" y2="72">
+            <stop offset="0" stop-color="#5e402a" />
+            <stop offset="0.55" stop-color="#45301f" />
+            <stop offset="1" stop-color="#2e1d12" />
+          </linearGradient>
+          <linearGradient id="tgHood" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#335a86" />
+            <stop offset="0.5" stop-color="#203f65" />
+            <stop offset="1" stop-color="#132a46" />
+          </linearGradient>
+          <linearGradient id="tgHoodDark" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1c3858" />
+            <stop offset="1" stop-color="#0d2036" />
+          </linearGradient>
+          <linearGradient id="tgSleeve" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2c4e78" />
+            <stop offset="0.55" stop-color="#1b3353" />
+            <stop offset="1" stop-color="#11253f" />
+          </linearGradient>
+          <linearGradient id="tgShirt" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff" />
+            <stop offset="0.6" stop-color="#eef3f8" />
+            <stop offset="1" stop-color="#dbe4ec" />
+          </linearGradient>
+          <linearGradient id="tgPants" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2b3440" />
+            <stop offset="0.5" stop-color="#1a212b" />
+            <stop offset="1" stop-color="#10151d" />
+          </linearGradient>
+          <linearGradient id="tgShoe" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff" />
+            <stop offset="1" stop-color="#e4ebf2" />
+          </linearGradient>
+          <linearGradient id="tgSole" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f6f9fc" />
+            <stop offset="1" stop-color="#d8e1eb" />
+          </linearGradient>
+          <linearGradient id="tgIris" gradientUnits="userSpaceOnUse" x1="0" y1="89" x2="0" y2="99">
+            <stop offset="0" stop-color="#5a3820" />
+            <stop offset="0.55" stop-color="#37200f" />
+            <stop offset="1" stop-color="#1c0f07" />
+          </linearGradient>
+          <linearGradient id="tgBadge" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff" />
+            <stop offset="1" stop-color="#e7edf4" />
+          </linearGradient>
+          <clipPath id="tgHairClip">
+            <path d="M113.5 85 C112 76 112.5 66 114.5 58 C116.5 48 120.5 41.5 126 37.5 C129.5 35 133 33.2 137 32.5 C139 31.8 141.5 32.3 143.5 33.3 C146.5 32.4 150 33 153 34.8 C157 37.2 160.5 40.6 163 45.5 C165.6 50.5 166.8 57 166.8 64 C166.8 71.5 166 79 164.5 85 C163.5 81 162.5 77 161 73 C159.5 68.5 157.5 65.5 154.5 63.5 C151 61.3 147 61.5 143.5 63.5 C140.5 65.2 138.5 67.5 135.5 68 C132 68.6 129 67.2 126 65.8 C123 64.4 120.2 65.2 118.2 68 C116.5 70.4 115.5 73.5 115.5 77 C115.5 79.8 116 82.5 116.5 85 Z" />
+          </clipPath>
+
+          <g id="tgLeg">
+            <path d="M100 464 C100 459 104 456 110 456 L130 456 C136 456 139 459 140 465 L141 476 C141 482 137 485 131 485 L106 485 C102 485 100 481 100 476 Z" fill="url(#tgShoe)" stroke="#1a2330" stroke-width="2.1" />
+            <path d="M102 466 C110 463 126 463 138 466 L139 473 C125 477 110 477 102 473 Z" fill="#233f68" />
+            <path d="M106 466 C112 464 121 464 127 466 M105 470 C112 468 121 468 128 470" fill="none" stroke="#c7d3df" stroke-width="1.2" stroke-linecap="round" />
+            <path d="M99 476 C107 480 124 481 136 478 L140 477 L140 484 C140 489 135 491 128 491 L105 491 C100 491 99 487 99 482 Z" fill="url(#tgSole)" stroke="#1a2330" stroke-width="1.8" />
+            <path d="M100 480 C111 484 127 484 139 480" fill="none" stroke="#c2cdd9" stroke-width="1.1" opacity="0.8" />
+
+            <path d="M106 288 L140 288 L140 346 C140 378 138 418 137 452 L138 466 L111 466 C109 432 105 392 105 352 Z" fill="url(#tgPants)" stroke="#0e141c" stroke-width="2.5" stroke-linejoin="round" />
+            <path d="M140 296 L140 346" stroke="#0b1017" stroke-width="1.8" opacity="0.8" />
+
+            <g transform="rotate(2 116 375)">
+              <rect x="106" y="358" width="20" height="31" rx="3" fill="#2d3643" stroke="#0f141c" stroke-width="1.6" />
+              <path d="M106 367 L126 367" stroke="#0f141c" stroke-width="1.4" />
+              <path d="M107 371 L125 371" stroke="#3c4756" stroke-width="1" opacity="0.8" />
+              <circle cx="116" cy="362.5" r="1.3" fill="#5a6675" />
+            </g>
+
+            <path d="M109 404 C112 406 116 406 119 404" fill="none" stroke="#323c49" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M110 416 C113 418 117 418 120 416" fill="none" stroke="#0c1118" stroke-width="1.3" stroke-linecap="round" opacity="0.8" />
+            <path d="M110 428 C113 430 117 430 120 428" fill="none" stroke="#323c49" stroke-width="1.3" stroke-linecap="round" opacity="0.7" />
+            <path d="M107 388 C109 400 109 414 108 426" fill="none" stroke="#333d4a" stroke-width="1.2" stroke-linecap="round" opacity="0.5" />
+
+            <path d="M111 452 L139 452 L139 464 C139 466 137 467 135 467 L114 467 C112 467 111 465 111 463 Z" fill="#171e27" stroke="#0f141c" stroke-width="1.6" />
+            <path d="M113 456 L137 456" stroke="#2e3845" stroke-width="1" opacity="0.8" />
+          </g>
+        </defs>
+
+        <ellipse cx="140" cy="496" rx="66" ry="6" fill="#07101f" opacity="0.32" />
+
+        <path d="M132 334 L148 334 L146 366 L140 358 L134 366 Z" fill="#0d1219" />
+
+        <use href="#tgLeg" />
+        <use href="#tgLeg" transform="translate(280 0) scale(-1 1)" />
+
+        <!-- White tee under the open hoodie -->
+        <path d="M118 147 C125 159 155 159 162 147 L165 292 L115 292 Z" fill="url(#tgShirt)" stroke="#1a2330" stroke-width="2" />
+        <path d="M118 147 C125 159 155 159 162 147 C155 157 125 157 118 147 Z" fill="#d4dfe9" />
+        <path d="M140 158 L140 284" stroke="#d2dce7" stroke-width="1.2" opacity="0.6" />
+        <path d="M122 268 L158 268" stroke="#c9d4e0" stroke-width="1" opacity="0.4" />
+
+        <!-- Hoodie front panels, mirrored -->
+        <g id="tgPanel">
+          <path d="M121 146 C104 147 88 153 80 161 C74 170 76 187 81 204 L89 246 C92 266 95 280 96 292 L121 292 L121 252 C120 230 119 208 121 188 L125 158 C124 152 123 149 121 146 Z" fill="url(#tgHood)" stroke="#101e31" stroke-width="2.4" stroke-linejoin="round" />
+          <path d="M122 160 C119 186 118 214 119 240 L120 288" fill="none" stroke="#0e2036" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+          <path d="M123.5 162 C121 186 120 212 121 238" fill="none" stroke="#4a7099" stroke-width="1.2" stroke-linecap="round" opacity="0.38" />
+          <path d="M84 176 C80 194 81 216 84 238" fill="none" stroke="#4d739d" stroke-width="1.4" stroke-linecap="round" opacity="0.26" />
+          <path d="M82 206 C85 208 88 208 90 206" fill="none" stroke="#0e2036" stroke-width="1.4" stroke-linecap="round" opacity="0.45" />
+          <path d="M110 150 C104 155 99 160 95 167" fill="none" stroke="#0e2036" stroke-width="1.7" stroke-linecap="round" opacity="0.55" />
+          <path d="M89 251 C91 260 93 274 94 284" fill="none" stroke="#5a80ab" stroke-width="1.1" stroke-linecap="round" opacity="0.2" />
+        </g>
+        <use href="#tgPanel" transform="translate(280 0) scale(-1 1)" />
+
+        <!-- Ribbed hem -->
+        <path d="M96 276 L184 276 L184 290 C184 293 181 294 178 294 L102 294 C99 294 96 292 96 289 Z" fill="#16304e" stroke="#101e31" stroke-width="2.1" />
+        <path d="M102 278 L102 292 M111 278 L111 292 M120 278 L120 292 M129 278 L129 292 M138 278 L138 292 M147 278 L147 292 M156 278 L156 292 M165 278 L165 292 M174 278 L174 292" stroke="#0d2137" stroke-width="1" opacity="0.7" />
+        <path d="M98 280 L182 280" stroke="#3a5d84" stroke-width="1" opacity="0.32" />
+
+        <!-- Lanyard and code badge -->
+        <path d="M133 148 C130 160 130 172 132 183" fill="none" stroke="#1b3355" stroke-width="3" stroke-linecap="round" />
+        <path d="M147 148 C150 160 150 172 148 183" fill="none" stroke="#1b3355" stroke-width="3" stroke-linecap="round" />
+        <path d="M133 148 C130 160 130 172 132 183" fill="none" stroke="#dbe5f0" stroke-width="0.9" stroke-linecap="round" opacity="0.7" />
+        <path d="M147 148 C150 160 150 172 148 183" fill="none" stroke="#dbe5f0" stroke-width="0.9" stroke-linecap="round" opacity="0.7" />
+        <g transform="rotate(-1.5 140 198)">
+          <rect x="130" y="183" width="24" height="31" rx="4" fill="#0b1728" opacity="0.18" />
+          <rect x="128" y="181" width="24" height="31" rx="4" fill="url(#tgBadge)" stroke="#182a45" stroke-width="1.7" />
+          <rect x="137" y="177.5" width="6" height="5" rx="1.4" fill="#cdd8e6" stroke="#182a45" stroke-width="1" />
+          <path d="M136 190 L133 194 L136 198 M144 190 L147 194 L144 198" fill="none" stroke="#233F68" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M141.5 189 L138.5 199" stroke="#233F68" stroke-width="1.2" stroke-linecap="round" />
+          <text x="140" y="208" text-anchor="middle" font-family="Nunito, sans-serif" font-size="4" font-weight="900" letter-spacing="0.4" fill="#233F68">SK</text>
+        </g>
+
+        <!-- Arms, broader at the shoulder and tapered -->
+        <g id="tgArm">
+          <path d="M110 150 C93 152 81 161 77 176 C72 193 72 215 75 235 C78 253 84 267 90 277 C93 282 95 285 96 289 L114 290 C112 279 111 267 110 255 C109 239 109 219 109 201 C109 185 110 166 110 150 Z" fill="url(#tgSleeve)" stroke="#101e31" stroke-width="2.3" stroke-linejoin="round" />
+          <path d="M110 150 C98 154 88 161 83 170" fill="none" stroke="#0d1f33" stroke-width="1.7" stroke-linecap="round" opacity="0.75" />
+          <path d="M107 172 C104 192 104 216 106 238 C107 252 107 266 106 278" fill="none" stroke="#0e2036" stroke-width="1.9" stroke-linecap="round" opacity="0.55" />
+          <path d="M80 182 C77 198 77 214 79 230" fill="none" stroke="#5a80ab" stroke-width="1.4" stroke-linecap="round" opacity="0.28" />
+          <path d="M78 240 C82 242 86 242 89 240 M78 248 C82 250 86 250 89 248" fill="none" stroke="#0e2036" stroke-width="1.4" stroke-linecap="round" opacity="0.6" />
+          <g transform="rotate(-7 104 281)">
+            <rect x="88" y="276" width="28" height="11" rx="3.5" fill="#132842" stroke="#101e31" stroke-width="1.7" />
+            <path d="M95 277 L95 286 M104 277 L104 286 M113 277 L113 286" stroke="#315272" stroke-width="1" opacity="0.7" />
+          </g>
+        </g>
+        <use href="#tgArm" transform="translate(280 0) scale(-1 1)" />
+
+        <!-- Smartwatch on the left wrist -->
+        <g transform="rotate(-7 102 263)">
+          <rect x="90" y="259" width="22" height="7.5" rx="2.4" fill="#0d1620" stroke="#070d14" stroke-width="1.3" />
+          <rect x="94" y="260" width="13" height="5.5" rx="1.4" fill="#284c66" />
+          <circle cx="100" cy="262.7" r="1" fill="#7fe3f2" />
+        </g>
+
+        <!-- Hood bunched behind the neck -->
+        <path d="M110 155 C112 143 121 134 131 131 C136 130 144 130 149 131 C159 134 168 143 170 155 C166 162 157 165 148 165 L132 165 C123 165 114 162 110 155 Z" fill="url(#tgHoodDark)" stroke="#101e31" stroke-width="2.2" />
+        <ellipse cx="140" cy="149" rx="17" ry="7" fill="#122a44" opacity="0.75" />
+        <path d="M120 150 C128 144 135 141 140 141 C145 141 152 144 160 150" fill="none" stroke="#2f4f74" stroke-width="1.4" stroke-linecap="round" opacity="0.55" />
+
+        <!-- Neck -->
+        <path d="M122 114 L122 139 C122 145 119 149 117 152 L163 152 C161 149 158 145 158 139 L158 114 Z" fill="url(#tgSkin)" stroke="#9a6248" stroke-width="1.8" />
+        <path d="M121 147 C129 151 151 151 159 147" fill="none" stroke="#c17f5c" stroke-width="1.1" stroke-linecap="round" opacity="0.2" />
+        <path d="M123 116 C123 125 122 132 120 139" fill="none" stroke="#c98a68" stroke-width="0.9" stroke-linecap="round" opacity="0.4" />
+        <path d="M157 116 C157 125 158 132 160 139" fill="none" stroke="#c98a68" stroke-width="0.9" stroke-linecap="round" opacity="0.4" />
+
+        <!-- Ears -->
+        <path d="M117 87 C113 83 110 88 111 94 C112 99 115 101 118 99 C116 95 116 91 117 87 Z" fill="url(#tgSkin)" stroke="#9a6248" stroke-width="1.7" />
+        <path d="M113.5 90 C112.5 92.5 112.5 96 113.5 97.5" fill="none" stroke="#b87355" stroke-width="0.9" stroke-linecap="round" opacity="0.5" />
+        <path d="M163 87 C167 83 170 88 169 94 C168 99 165 101 162 99 C164 95 164 91 163 87 Z" fill="url(#tgSkin)" stroke="#9a6248" stroke-width="1.7" />
+        <path d="M166.5 90 C167.5 92.5 167.5 96 166.5 97.5" fill="none" stroke="#b87355" stroke-width="0.9" stroke-linecap="round" opacity="0.5" />
+
+        <!-- Face: wider cheekbones and a square jaw -->
+        <path d="M113 66 C113 54 124 47 140 47 C156 47 167 54 167 66 L167 84 C166 95 164 104 160 110 L157 115 C155 118 153 120 150 122 L148 124 L146 127 L134 127 L132 124 L130 122 C127 120 125 118 123 115 L120 110 C116 104 114 95 113 84 Z" fill="url(#tgSkin)" stroke="#9a6248" stroke-width="1.8" />
+        <path d="M119 86 C122 80 127 76 133 73 C139 70 145 69 151 71 C156 72 160 75 163 79 L162 81 C157 77 152 75 147 74 C141 73 136 75 131 78 C126 81 122 84 120 88 Z" fill="#c17f5c" opacity="0.14" />
+        <path d="M124 108 C128 119 133 124 140 125 C147 124 152 119 156 108 C155 119 148 127 140 127 C132 127 125 119 124 108 Z" fill="#8a553b" opacity="0.1" />
+        <ellipse cx="140" cy="64" rx="11" ry="4.5" fill="#ffe3c9" opacity="0.12" />
+        <ellipse cx="125" cy="101" rx="4.5" ry="2.6" fill="#ffe3c9" opacity="0.1" />
+        <ellipse cx="155" cy="101" rx="4.5" ry="2.6" fill="#ffe3c9" opacity="0.1" />
+        <ellipse cx="153" cy="106" rx="4" ry="2.6" fill="#e08f6c" opacity="0.09" />
+
+        <!-- Nose -->
+        <path d="M140 97 C139.8 101 138.4 104.5 139.2 106.8 C140 108 141.2 107.8 142.2 106.4" fill="none" stroke="#b9795c" stroke-width="1.1" stroke-linecap="round" />
+        <ellipse cx="138.7" cy="107.2" rx="1.6" ry="0.7" fill="#a86548" opacity="0.32" />
+        <path d="M141 98 C141.2 101 141 103 140.6 105" fill="none" stroke="#fbe0c6" stroke-width="0.9" stroke-linecap="round" opacity="0.35" />
+
+        <!-- Mouth: relaxed, slightly asymmetric smirk -->
+        <path d="M131 114.2 C135.5 117.2 144 117.4 149 113.6" fill="none" stroke="#8f5347" stroke-width="1.6" stroke-linecap="round" />
+        <path d="M133 116.6 C136.5 118.6 143.5 118.6 147 116.4" fill="none" stroke="#c98268" stroke-width="1" stroke-linecap="round" opacity="0.6" />
+        <path d="M149.4 113.3 C150 112.8 150.3 112.3 150.6 111.7" fill="none" stroke="#a86548" stroke-width="0.8" stroke-linecap="round" opacity="0.5" />
+        <path d="M138 109.5 C139 110.2 141 110.2 142 109.5" fill="none" stroke="#c17f5c" stroke-width="0.7" stroke-linecap="round" opacity="0.25" />
+
+        <!-- Eyes: narrow, heavy-lidded and level -->
+        <path d="M120.5 94 C124 90.4 131 89.8 135.5 93.2 C131.8 96.6 124.5 97.6 120.5 94 Z" fill="#fffdfa" />
+        <path d="M144.5 93.2 C149 89.8 156 90.4 159.5 94 C155.5 97.6 148.2 96.6 144.5 93.2 Z" fill="#fffdfa" />
+        <ellipse cx="128" cy="93.8" rx="2.85" ry="2.9" fill="url(#tgIris)" />
+        <ellipse cx="152" cy="93.8" rx="2.85" ry="2.9" fill="url(#tgIris)" />
+        <ellipse cx="128" cy="94.2" rx="1.25" ry="1.4" fill="#1c0f07" />
+        <ellipse cx="152" cy="94.2" rx="1.25" ry="1.4" fill="#1c0f07" />
+        <circle cx="127" cy="92.5" r="0.85" fill="#fff" />
+        <circle cx="151" cy="92.5" r="0.85" fill="#fff" />
+        <circle cx="129" cy="95.2" r="0.38" fill="#fff" opacity="0.75" />
+        <circle cx="153" cy="95.2" r="0.38" fill="#fff" opacity="0.75" />
+        <path d="M119.5 94 C123.5 89.2 132 88.8 136.2 92.8" fill="none" stroke="#2c1a11" stroke-width="1.9" stroke-linecap="round" />
+        <path d="M143.8 92.8 C148 88.8 156.5 89.2 160.5 94" fill="none" stroke="#2c1a11" stroke-width="1.9" stroke-linecap="round" />
+        <path d="M123 95.4 C126.5 96.8 131 96.3 134 94.3 M146 94.3 C149 96.3 153.5 96.8 157 95.4" fill="none" stroke="#b97c5c" stroke-width="0.55" stroke-linecap="round" opacity="0.38" />
+        <path d="M122 89.6 C125.5 88.2 130 88.3 133.5 90.2 M146.5 90.2 C150 88.3 154.5 88.2 158 89.6" fill="none" stroke="#a86548" stroke-width="0.7" stroke-linecap="round" opacity="0.32" />
+        <circle cx="122.8" cy="94.5" r="0.6" fill="#a96a4c" opacity="0.35" />
+        <circle cx="157.2" cy="94.5" r="0.6" fill="#a96a4c" opacity="0.35" />
+
+        <!-- Brows: thick, low and level -->
+        <path d="M118.5 85.8 C123 82.6 131.5 81.8 136.8 83.6 L136.4 87.4 C131 85.6 124.8 86.2 120.8 88.4 Z" fill="#2f1d13" />
+        <path d="M161.5 85.8 C157 82.6 148.5 81.8 143.2 83.6 L143.6 87.4 C149 85.6 155.2 86.2 159.2 88.4 Z" fill="#2f1d13" />
+
+        <!-- Hair: short textured crop with a soft side-swept fringe -->
+        <path d="M113.5 85 C112 76 112.5 66 114.5 58 C116.5 48 120.5 41.5 126 37.5 C129.5 35 133 33.2 137 32.5 C139 31.8 141.5 32.3 143.5 33.3 C146.5 32.4 150 33 153 34.8 C157 37.2 160.5 40.6 163 45.5 C165.6 50.5 166.8 57 166.8 64 C166.8 71.5 166 79 164.5 85 C163.5 81 162.5 77 161 73 C159.5 68.5 157.5 65.5 154.5 63.5 C151 61.3 147 61.5 143.5 63.5 C140.5 65.2 138.5 67.5 135.5 68 C132 68.6 129 67.2 126 65.8 C123 64.4 120.2 65.2 118.2 68 C116.5 70.4 115.5 73.5 115.5 77 C115.5 79.8 116 82.5 116.5 85 Z" fill="url(#tgHair)" stroke="#241610" stroke-width="1.6" stroke-linejoin="round" />
+        <g clip-path="url(#tgHairClip)">
+          <path d="M120 58 C123 47 129 41 137 38 C145 35 153 37 159 42 C152 40 145 41 139 44 C133 47 128 52 124 59 Z" fill="url(#tgHairHi)" opacity="0.38" />
+          <path d="M123 68 C128 57 136 50 145 47" fill="none" stroke="#6b4a33" stroke-width="1" stroke-linecap="round" opacity="0.32" />
+          <path d="M131 61 C138 53 147 49 155 50" fill="none" stroke="#6b4a33" stroke-width="0.9" stroke-linecap="round" opacity="0.26" />
+          <path d="M140 42 C148 39 156 42 161 49" fill="none" stroke="#6b4a33" stroke-width="0.9" stroke-linecap="round" opacity="0.24" />
+          <path d="M155 54 C159 59 161 65 161 71" fill="none" stroke="#6b4a33" stroke-width="0.9" stroke-linecap="round" opacity="0.2" />
+          <path d="M149 36 C150 42 151 48 151 54" fill="none" stroke="#1a0f0a" stroke-width="0.9" stroke-linecap="round" opacity="0.22" />
+          <path d="M158 40 C160 46 161 52 161 58" fill="none" stroke="#1a0f0a" stroke-width="0.8" stroke-linecap="round" opacity="0.2" />
+          <path d="M133 37 C131 44 130 51 131 58" fill="none" stroke="#1a0f0a" stroke-width="0.9" stroke-linecap="round" opacity="0.36" />
+          <path d="M136 38 C134 45 133 52 134 59" fill="none" stroke="#5a3c27" stroke-width="0.8" stroke-linecap="round" opacity="0.26" />
+          <path d="M152 34 C153 41 154 47 153 53" fill="none" stroke="#1a0f0a" stroke-width="0.8" stroke-linecap="round" opacity="0.28" />
+          <path d="M122 72 C126 69 130 67 134 67" fill="none" stroke="#4a3021" stroke-width="0.8" stroke-linecap="round" opacity="0.25" />
+          <path d="M156 65 C159 69 160 73 161 78" fill="none" stroke="#1a0f0a" stroke-width="0.8" stroke-linecap="round" opacity="0.2" />
+        </g>
+      </svg>
+      </div>
+
+      <div class="tour-speech" role="dialog" aria-live="polite" aria-label="Tour guide">
+        <button class="tour-close" id="tour-close" type="button" aria-label="End tour">×</button>
+        <div class="tour-eyebrow"><span id="tour-count">01 / 04</span><b id="tour-place">TOWN HALL</b></div>
+        <p class="tour-line" id="tour-line"></p>
+        <div class="tour-actions">
+          <button class="tour-next" id="tour-next" type="button">NEXT →</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="scrim" id="scrim"></div>
+
+    <!-- Town Hall: the introduction, nothing else -->
+    <section class="sheet townhall" id="townhall-sheet" role="dialog" aria-modal="true" aria-labelledby="townhall-title">
+      <header class="sheet-ribbon">
+        <div class="sheet-title" id="townhall-title">TOWN HALL 18 <small>AGILE TITAN CITADEL</small></div>
+        <button class="close-btn" id="townhall-close" aria-label="Close Town Hall">×</button>
+      </header>
+      <div class="sheet-body townhall-body">
+        <div class="townhall-copy" id="townhall-copy"></div>
+        <div class="townhall-cta-card">
+          <div class="cta-card-header">
+            <span class="cta-badge">AVAILABLE IMMEDIATELY · 0-DAY NOTICE</span>
+            <h3>Recruiter Fast-Track Actions</h3>
+          </div>
+          <div class="cta-actions-grid">
+            <a class="cta-btn cta-btn-gold" href="assets/Balaji_Palani_Senior_Scrum_Master_Resume.pdf" download="Balaji_Palani_Senior_Scrum_Master_Resume.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download ATS Resume (PDF)</span>
+            </a>
+            <a class="cta-btn cta-btn-green" href="https://wa.me/917540015522?text=Hi%20Balaji,%20reviewed%20your%203D%20Clash%20Village%20portfolio%20and%20would%20love%20to%20connect!" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.12-.22-.19-.47-.32"/></svg>
+              <span>WhatsApp Chat</span>
+            </a>
+            <a class="cta-btn cta-btn-blue" href="mailto:balajinia@gmail.com?subject=Senior%20Scrum%20Master%20Opportunity%20-%20Balaji%20Palani">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span>Email Direct</span>
+            </a>
+            <a class="cta-btn cta-btn-navy" href="https://linkedin.com/in/balajipalani" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My profile: short intro and socials -->
+    <section class="sheet profile" id="profile-sheet" role="dialog" aria-modal="true" aria-labelledby="profile-title">
+      <header class="sheet-ribbon">
+        <div class="sheet-title" id="profile-title">MY PROFILE <small>WHO I AM &amp; WHERE TO FIND ME</small></div>
+        <button class="close-btn" id="profile-close" aria-label="Close profile">×</button>
+      </header>
+      <div class="sheet-body profile-body">
+        <div class="profile-head">
+          <div class="profile-avatar"><span>BP</span></div>
+          <div>
+            <h2 id="profile-name">Balaji Palani</h2>
+            <div style="font-size: 0.85rem; color: #ffc83a; font-weight: 700; margin-top: 2px;">Senior Scrum Master · Agile Delivery Lead</div>
+          </div>
+        </div>
+
+        <div class="section-label">A short intro</div>
+        <div class="profile-intro" id="profile-intro"></div>
+
+        <div style="margin: 14px 0 16px;">
+          <a class="cta-btn cta-btn-gold" href="assets/Balaji_Palani_Senior_Scrum_Master_Resume.pdf" download="Balaji_Palani_Senior_Scrum_Master_Resume.pdf" style="width: 100%; box-sizing: border-box;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download ATS Resume (PDF)</span>
+          </a>
+        </div>
+
+        <div class="section-label">Direct Contacts</div>
+        <div class="profile-socials">
+          <a class="social-link social-email" href="mailto:balajinia@gmail.com">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </span>
+            <span class="social-copy"><b>Email</b><small>balajinia@gmail.com</small></span>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="social-link social-github" href="https://github.com/layyzee" target="_blank" rel="noreferrer">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.88 1.52 2.32 1.08 2.89.82.09-.64.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.8a9.6 9.6 0 0 1 2.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            </span>
+            <span class="social-copy"><b>GitHub</b><small>github.com/layyzee</small></span>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="social-link social-linkedin" href="https://linkedin.com/in/balajipalani" target="_blank" rel="noreferrer">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </span>
+            <span class="social-copy"><b>LinkedIn</b><small>linkedin.com/in/balajipalani</small></span>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="social-link social-whatsapp" href="https://wa.me/917540015522?text=Hi%20Balaji,%20reviewed%20your%203D%20Clash%20Village%20portfolio%20and%20would%20love%20to%20connect!" target="_blank" rel="noreferrer">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.12-.22-.19-.47-.32"/></svg>
+            </span>
+            <span class="social-copy"><b>WhatsApp</b><small>+91-7540015522</small></span>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project sheet: one project per page, pitch first, actions second -->
+    <section class="sheet" id="project-sheet" role="dialog" aria-modal="true" aria-labelledby="project-title">
+      <header class="sheet-ribbon project-ribbon">
+        <button class="back-btn" id="project-back" type="button" aria-label="Back to the workshop">← BACK</button>
+        <div class="sheet-title" id="project-title">CLOCKWORK</div>
+        <button class="close-btn" id="project-close" aria-label="Close project">×</button>
+      </header>
+      <div class="sheet-body project-body">
+        <p class="project-pitch" id="project-pitch"></p>
+        <div class="project-actions" id="project-actions" aria-label="Project actions"></div>
+      </div>
+    </section>
+
+    <!-- Builder workshop: the 11-project index, nothing else -->
+    <section class="sheet" id="workshop-sheet" role="dialog" aria-modal="true" aria-labelledby="workshop-title">
+      <header class="sheet-ribbon">
+        <div class="sheet-title" id="workshop-title">WORKSHOP <small>Projects I built in Hackathons or Solo</small></div>
+        <button class="close-btn" id="workshop-close" aria-label="Close workshop">×</button>
+      </header>
+      <div class="sheet-body">
+        <div class="workshop-list" id="workshop-list"></div>
+      </div>
+    </section>
+
+    <!-- Clan Castle: previous clans and target startups -->
+    <section class="sheet clan" id="clan-sheet" role="dialog" aria-modal="true" aria-labelledby="clan-title">
+      <header class="sheet-ribbon clan-ribbon">
+        <div class="sheet-title" id="clan-title">CLAN CASTLE <small id="clan-subtitle">work I am doing right now</small></div>
+        <button class="close-btn" id="clan-close" aria-label="Close Clan Castle">×</button>
+      </header>
+      <div class="clan-shell">
+        <div class="clan-tabs" id="clan-tabs" role="tablist" aria-label="Clan Castle sections">
+          <button class="clan-tab is-active" data-tab="myclan" type="button" role="tab" aria-selected="true" aria-controls="clan-board">MY CLAN</button>
+          <button class="clan-tab" data-tab="history" type="button" role="tab" aria-selected="false" aria-controls="clan-board">PREVIOUS CLANS</button>
+          <button class="clan-tab" data-tab="bookmarks" type="button" role="tab" aria-selected="false" aria-controls="clan-board">BOOKMARKS</button>
+        </div>
+        <div class="clan-main">
+          <div class="clan-board" id="clan-board" role="tabpanel" aria-live="polite" tabindex="0"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barracks: tech stack with original brand marks -->
+    <section class="sheet" id="info-sheet" role="dialog" aria-modal="true" aria-labelledby="info-title">
+      <header class="sheet-ribbon">
+        <div class="sheet-title" id="info-title">BARRACKS <small id="info-sub">THE LANGUAGES, FRAMEWORKS & TOOLS I USE OR AM FAMILIAR WITH</small></div>
+        <button class="close-btn" id="info-close" aria-label="Close building info">×</button>
+      </header>
+      <div class="sheet-body">
+        <div class="info-list" id="info-list"></div>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section class="sheet profile" id="settings-sheet" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <header class="sheet-ribbon">
+        <div class="sheet-title" id="settings-title">SETTINGS <small>SOUND</small></div>
+        <button class="close-btn" id="settings-close" aria-label="Close settings">×</button>
+      </header>
+      <div class="sheet-body">
+        <div class="settings-block">
+          <div class="settings-label">AUDIO</div>
+          <button class="settings-row settings-toggle" id="settings-sound" type="button" role="switch" aria-checked="true">
+            <span class="settings-row-copy">
+              <b>Sound</b>
+              <small>Village audio · <span id="settings-sound-state">ON</span></small>
+            </span>
+            <span class="ios-switch" aria-hidden="true"><i></i></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast" id="toast"></div>
+
+    <div class="arch-lightbox" id="arch-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Project media viewer">
+      <button class="arch-lightbox-close" id="arch-lightbox-close" type="button" aria-label="Close media">×</button>
+      <div class="arch-lightbox-copy">
+        <span id="arch-lightbox-kicker">WORKSHOP · SYSTEM ARCHITECTURE</span>
+        <b id="arch-lightbox-title">ARCHITECTURE</b>
+      </div>
+      <img id="arch-lightbox-img" alt="System architecture board" />
+      <video class="arch-lightbox-video" id="project-video" controls playsinline preload="metadata" hidden></video>
+    </div>
+
+    <!-- Loading screen. The art is our own village, not a game asset. -->
+    <div id="boot" role="status" aria-live="polite">
+      <div class="boot-panel">
+        <span class="boot-loading">Loading</span>
+        <div class="boot-bar" role="progressbar" aria-label="Loading village" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <i id="boot-fill"></i>
+        </div>
+        <div class="boot-status sr-only" id="boot-status" aria-live="polite">Loading geometry</div>
+      </div>
+    </div>
+
+    <!-- Logo gate. This is the entry gesture that unlocks intro audio. -->
+    <div id="gate">
+      <picture class="gate-mark">
+        <source srcset="assets/brand/balaji-mark.svg" type="image/svg+xml" />
+        <img src="assets/brand/balaji-mark.svg" alt="Balaji Palani" width="640" height="640" />
+      </picture>
+      <button class="gate-enter" id="gate-enter" type="button" aria-label="Enter the village">
+        <span>TAP TO ENTER</span>
+      </button>
+    </div>
+
+    <!-- Original black boot card. The three rows spell BAL / AJI / PAL. -->
+    <div id="splash" aria-hidden="true">
+      <svg class="splash-wordmark" viewBox="0 0 300 300" role="img" aria-label="BALAJI">
+        <text x="50" y="100" style="--i:0">B</text><text x="150" y="100" style="--i:1">A</text><text x="250" y="100" style="--i:2">L</text>
+        <text x="50" y="191" style="--i:3">A</text><text x="150" y="191" style="--i:4">J</text><text x="250" y="191" style="--i:5">I</text>
+        <text x="50" y="282" style="--i:6">P</text><text x="150" y="282" style="--i:7">A</text><text x="250" y="282" style="--i:8">L</text>
+      </svg>
+    </div>
+  </div>
+
+  <script type="module" src="village-v2.js"></script>
+</body>
+</html>

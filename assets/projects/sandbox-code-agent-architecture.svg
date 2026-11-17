@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#202a30" fill-opacity=".5"/></marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2559d8"/></marker>
+    <marker id="arrowCoral" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#c2533a"/></marker>
+    <marker id="arrowMint" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#19795f"/></marker>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r=".8" fill="#10181d" fill-opacity=".09"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#f2eee6"/>
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+  <rect x="20" y="20" width="1880" height="1040" fill="none" stroke="#202a30" stroke-opacity=".26"/>
+
+  <text x="56" y="58" font-family="Consolas, 'Courier New', monospace" font-size="11" letter-spacing="2.2" fill="#2559d8">WORKSHOP / SYSTEM ARCHITECTURE</text>
+  <text x="1864" y="58" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="11" letter-spacing="2" fill="#5f686d">SANDBOX CODE AGENT / 2026</text>
+  <line x1="56" y1="74" x2="1864" y2="74" stroke="#202a30" stroke-opacity=".24"/>
+
+  <text x="56" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="43" font-weight="700" letter-spacing="-.5" fill="#10181d">A sealed room</text>
+  <text x="56" y="163" font-family="Georgia, 'Times New Roman', serif" font-size="43" font-style="italic" fill="#2559d8">for generated code.</text>
+  <text x="700" y="112" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#5f686d">One request becomes code, runs in a disposable sandbox, and returns a receipt.</text>
+  <text x="700" y="135" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#5f686d">The loop owns retries. The sandbox owns containment. The evidence owns the claims.</text>
+
+  <g>
+    <text x="1864" y="100" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="36" fill="#10181d">24,133</text>
+    <text x="1864" y="119" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="9.4" letter-spacing="1.1" fill="#5f686d">REAL REQUEST / 1 ATTEMPT / 5.6 S</text>
+    <line x1="1638" y1="132" x2="1864" y2="132" stroke="#202a30" stroke-opacity=".24"/>
+    <text x="1638" y="151" font-family="Consolas, 'Courier New', monospace" font-size="9.4" letter-spacing="1.1" fill="#5f686d">$0.00184 LIST PRICE / E2B + GPT-OSS 120B</text>
+  </g>
+
+  <line x1="616" y1="340" x2="674" y2="340" stroke="#202a30" stroke-opacity=".5" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="1246" y1="340" x2="1304" y2="340" stroke="#202a30" stroke-opacity=".5" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="1590" y1="504" x2="1590" y2="518" stroke="#19795f" stroke-opacity=".5" stroke-width="1.3" marker-end="url(#arrowMint)"/>
+<line x1="1304" y1="680" x2="1246" y2="680" stroke="#202a30" stroke-opacity=".5" stroke-width="1.3" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="56" y="182" width="548" height="318" rx="4" fill="#faf6ee" fill-opacity=".7" stroke="#202a30" stroke-opacity=".34" />
+    <rect x="56" y="182" width="4" height="318" fill="#2559d8"/>
+    <text x="82" y="213" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#2559d8">PLANE 01</text>
+    <text x="82" y="242" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#10181d">CLIENT / DEMO</text>
+    <text x="82" y="268" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#5f686d">One box. One button. A real receipt.</text>
+    <line x1="82" y1="284" x2="578" y2="284" stroke="#202a30" stroke-opacity=".16"/>
+    <text x="82" y="304" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#98a1a5">OWNS</text>
+    <text x="84" y="324" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">Streamlit app: request box, Run button, live attempt status</text><text x="84" y="354" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">renderer dispatch shows text, dataframe, chart image, or</text><text x="84" y="371" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">download</text><text x="84" y="401" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">footer prints attempts, wall time, notional cost, sandbox torn</text><text x="84" y="418" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">down</text>
+    <g><rect x="82" y="436" width="80" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="122" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">STREAMLIT</text></g><g><rect x="169" y="436" width="59" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="198.5" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">PYTHON</text></g><g><rect x="235" y="436" width="39" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="254.5" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">E2B</text></g><g><rect x="281" y="436" width="101" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="331.5" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">GPT-OSS 120B</text></g>
+    <text x="82" y="480" font-family="Arial, Helvetica, sans-serif" font-size="11.4" font-style="italic" fill="#5f686d">Captured live on 2026-11-06. No hosted endpoint.</text>
+  </g>
+<g>
+    <rect x="686" y="182" width="548" height="318" rx="4" fill="#faf6ee" fill-opacity=".7" stroke="#202a30" stroke-opacity=".34" />
+    <rect x="686" y="182" width="4" height="318" fill="#2559d8"/>
+    <text x="712" y="213" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#2559d8">PLANE 02</text>
+    <text x="712" y="242" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#10181d">AGENT LOOP</text>
+    <text x="712" y="268" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#5f686d">Generate. Execute. Decide.</text>
+    <line x1="712" y1="284" x2="1208" y2="284" stroke="#202a30" stroke-opacity=".16"/>
+    <text x="712" y="304" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#98a1a5">OWNS</text>
+    <text x="714" y="324" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">LangGraph state machine: generate, execute, evaluate</text><text x="714" y="354" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">evaluate routes to repair or give_up; success ends the run</text><text x="714" y="384" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">attempt cap is structural: no edge back to repair at max</text><text x="714" y="401" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">attempts</text>
+    <g><rect x="712" y="436" width="80" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="752" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">LANGGRAPH</text></g><g><rect x="799" y="436" width="66" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="832" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">CODEGEN</text></g><g><rect x="872" y="436" width="59" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="901.5" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">REPAIR</text></g><g><rect x="938" y="436" width="66" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="971" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">GIVE UP</text></g>
+    <text x="712" y="480" font-family="Arial, Helvetica, sans-serif" font-size="11.4" font-style="italic" fill="#5f686d">The traceback is the input to the next attempt.</text>
+  </g>
+<g>
+    <rect x="1316" y="182" width="548" height="318" rx="4" fill="#faf6ee" fill-opacity=".7" stroke="#202a30" stroke-opacity=".34" />
+    <rect x="1316" y="182" width="4" height="318" fill="#19795f"/>
+    <text x="1342" y="213" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#19795f">PLANE 03</text>
+    <text x="1342" y="242" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#10181d">SANDBOX</text>
+    <text x="1342" y="268" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#5f686d">Containment, not a promise.</text>
+    <line x1="1342" y1="284" x2="1838" y2="284" stroke="#202a30" stroke-opacity=".16"/>
+    <text x="1342" y="304" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#98a1a5">OWNS</text>
+    <text x="1344" y="324" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">swappable backend: E2B microVM or Docker with networking</text><text x="1344" y="341" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">disabled</text><text x="1344" y="371" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">per-run timeout, empty environment, fresh filesystem, teardown</text><text x="1344" y="401" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">host API keys and host files never enter the executed code</text>
+    <g><rect x="1342" y="436" width="39" height="22" rx="11" fill="none" stroke="#19795f" stroke-opacity=".5"/><text x="1361.5" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">E2B</text></g><g><rect x="1388" y="436" width="59" height="22" rx="11" fill="none" stroke="#19795f" stroke-opacity=".5"/><text x="1417.5" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">DOCKER</text></g><g><rect x="1454" y="436" width="87" height="22" rx="11" fill="none" stroke="#19795f" stroke-opacity=".5"/><text x="1497.5" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">NO NETWORK</text></g><g><rect x="1548" y="436" width="66" height="22" rx="11" fill="none" stroke="#19795f" stroke-opacity=".5"/><text x="1581" y="451" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">TIMEOUT</text></g>
+    <text x="1342" y="480" font-family="Arial, Helvetica, sans-serif" font-size="11.4" font-style="italic" fill="#5f686d">The code runs; it does not get a route home.</text>
+  </g>
+<g>
+    <rect x="1316" y="522" width="548" height="318" rx="4" fill="#faf6ee" fill-opacity=".7" stroke="#202a30" stroke-opacity=".34" />
+    <rect x="1316" y="522" width="4" height="318" fill="#2559d8"/>
+    <text x="1342" y="553" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#2559d8">PLANE 04</text>
+    <text x="1342" y="582" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#10181d">CONTRACT / RENDER</text>
+    <text x="1342" y="608" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#5f686d">Make the output legible.</text>
+    <line x1="1342" y1="624" x2="1838" y2="624" stroke="#202a30" stroke-opacity=".16"/>
+    <text x="1342" y="644" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#98a1a5">OWNS</text>
+    <text x="1344" y="664" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">the model prints one JSON envelope: text, table, chart, or file</text><text x="1344" y="694" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">malformed output falls back to raw stdout; secrets are redacted</text><text x="1344" y="724" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">renderers turn the envelope into a table, image, download, or</text><text x="1344" y="741" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">sentence</text>
+    <g><rect x="1342" y="776" width="108" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="1396" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">JSON ENVELOPE</text></g><g><rect x="1457" y="776" width="66" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="1490" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">4 TYPES</text></g><g><rect x="1530" y="776" width="80" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="1570" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">REDACTION</text></g><g><rect x="1617" y="776" width="73" height="22" rx="11" fill="none" stroke="#2559d8" stroke-opacity=".5"/><text x="1653.5" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">DISPATCH</text></g>
+    <text x="1342" y="820" font-family="Arial, Helvetica, sans-serif" font-size="11.4" font-style="italic" fill="#5f686d">Structured output is the contract; rendering is downstream.</text>
+  </g>
+<g>
+    <rect x="686" y="522" width="548" height="318" rx="4" fill="#faf6ee" fill-opacity=".7" stroke="#202a30" stroke-opacity=".34" />
+    <rect x="686" y="522" width="4" height="318" fill="#19795f"/>
+    <text x="712" y="553" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#19795f">PLANE 05</text>
+    <text x="712" y="582" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#10181d">EVIDENCE</text>
+    <text x="712" y="608" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#5f686d">Claims carry their receipts.</text>
+    <line x1="712" y1="624" x2="1208" y2="624" stroke="#202a30" stroke-opacity=".16"/>
+    <text x="712" y="644" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#98a1a5">OWNS</text>
+    <text x="714" y="664" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">30-request gauntlet, 3 categories: 90 / 6.7 / 3.3 baseline and</text><text x="714" y="681" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">postfix</text><text x="714" y="711" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">v3 scripting re-check: 90 / 10 / 0; 16 of 16 injection cases</text><text x="714" y="728" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">passed</text><text x="714" y="758" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">budget ceilings: 16k tokens, $0.010, 75 s sandbox; JSON in the</text><text x="714" y="775" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">repo</text>
+    <g><rect x="712" y="776" width="94" height="22" rx="11" fill="none" stroke="#19795f" stroke-opacity=".5"/><text x="759" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">30 REQUESTS</text></g><g><rect x="813" y="776" width="53" height="22" rx="11" fill="none" stroke="#19795f" stroke-opacity=".5"/><text x="839.5" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">16/16</text></g><g><rect x="873" y="776" width="87" height="22" rx="11" fill="none" stroke="#19795f" stroke-opacity=".5"/><text x="916.5" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">16K TOKENS</text></g><g><rect x="967" y="776" width="59" height="22" rx="11" fill="none" stroke="#19795f" stroke-opacity=".5"/><text x="996.5" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#5f686d">$0.010</text></g>
+    <text x="712" y="820" font-family="Arial, Helvetica, sans-serif" font-size="11.4" font-style="italic" fill="#5f686d">Notional list price. The free tier billed $0.00.</text>
+  </g>
+<g>
+    <rect x="56" y="522" width="548" height="318" rx="4" fill="rgba(194,83,58,0.045)" fill-opacity="1" stroke="#c2533a" stroke-opacity=".55" stroke-dasharray="7 5"/>
+    <rect x="56" y="522" width="4" height="318" fill="#c2533a"/>
+    <text x="82" y="553" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#c2533a">PLANE 06 / CAPTURE ONLY</text>
+    <text x="82" y="582" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".2" fill="#10181d">CAPTURE BOUNDARY</text>
+    <text x="82" y="608" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16" fill="#5f686d">What was real, and when.</text>
+    <line x1="82" y1="624" x2="578" y2="624" stroke="#202a30" stroke-opacity=".16"/>
+    <text x="82" y="644" font-family="Consolas, 'Courier New', monospace" font-size="9.6" letter-spacing="1.8" fill="#98a1a5">OWNS</text>
+    <text x="84" y="664" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">committed UI screenshots are real first-attempt runs from July</text><text x="84" y="681" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">2026</text><text x="84" y="711" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">benchmark used llama-3.3-70b-versatile, now retired; not re-run</text><text x="84" y="741" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">film screens re-captured 2026-11-06 on gpt-oss-120b; no live</text><text x="84" y="758" font-family="Arial, Helvetica, sans-serif" font-size="14.2" fill="#10181d">endpoint</text>
+    <g><rect x="82" y="776" width="101" height="22" rx="11" fill="none" stroke="#c2533a" stroke-opacity=".5"/><text x="132.5" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#c2533a">CAPTURE ONLY</text></g><g><rect x="190" y="776" width="108" height="22" rx="11" fill="none" stroke="#c2533a" stroke-opacity=".5"/><text x="244" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#c2533a">MODEL RETIRED</text></g><g><rect x="305" y="776" width="87" height="22" rx="11" fill="none" stroke="#c2533a" stroke-opacity=".5"/><text x="348.5" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#c2533a">FRESH RUNS</text></g><g><rect x="399" y="776" width="101" height="22" rx="11" fill="none" stroke="#c2533a" stroke-opacity=".5"/><text x="449.5" y="791" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.1" letter-spacing=".45" fill="#c2533a">NO LIVE DEMO</text></g>
+    <text x="82" y="820" font-family="Arial, Helvetica, sans-serif" font-size="11.4" font-style="italic" fill="#5f686d">The local Streamlit app is the demo. Nothing is hosted.</text>
+  </g>
+
+  <line x1="56" y1="842" x2="1864" y2="842" stroke="#202a30" stroke-opacity=".26"/>
+  <text x="185.14285714285714" y="900" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".6" fill="#5f686d">ASK / 1 REQUEST</text><line x1="301.2857142857143" y1="896" x2="323.2857142857143" y2="896" stroke="#2559d8" stroke-width="1.3" marker-end="url(#arrowBlue)"/><text x="443.42857142857144" y="900" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".6" fill="#5f686d">GENERATE</text><line x1="559.5714285714286" y1="896" x2="581.5714285714286" y2="896" stroke="#2559d8" stroke-width="1.3" marker-end="url(#arrowBlue)"/><text x="701.7142857142857" y="900" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".6" fill="#5f686d">SANDBOX EXECUTE</text><line x1="817.8571428571429" y1="896" x2="839.8571428571429" y2="896" stroke="#2559d8" stroke-width="1.3" marker-end="url(#arrowBlue)"/><text x="960" y="900" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".6" fill="#5f686d">EVALUATE</text><line x1="1076.142857142857" y1="896" x2="1098.142857142857" y2="896" stroke="#2559d8" stroke-width="1.3" marker-end="url(#arrowBlue)"/><text x="1218.2857142857142" y="900" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".6" fill="#5f686d">REPAIR?</text><line x1="1334.4285714285713" y1="896" x2="1356.4285714285713" y2="896" stroke="#2559d8" stroke-width="1.3" marker-end="url(#arrowBlue)"/><text x="1476.5714285714284" y="900" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".6" fill="#5f686d">RENDER</text><line x1="1592.7142857142858" y1="896" x2="1614.7142857142858" y2="896" stroke="#2559d8" stroke-width="1.3" marker-end="url(#arrowBlue)"/><text x="1734.857142857143" y="900" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.2" letter-spacing=".6" fill="#5f686d">RECEIPT</text>
+
+  <g>
+    <rect x="56" y="924" width="1120" height="92" rx="3" fill="#10181d"/>
+    <text x="78" y="948" font-family="Consolas, 'Courier New', monospace" font-size="9.5" letter-spacing="1.5" fill="#a9c2ff">REAL RUNS / NOT A MOCK</text>
+    <text x="78" y="972" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#f1ece1">24,133 from one attempt x 5.6 s x $0.00184 list price. Two more captured output types: table and chart.</text>
+    <text x="78" y="994" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#f1ece1">30-request gauntlet: 90 / 6.7 / 3.3. 16 of 16 injections passed. The rejected fix stayed rejected.</text>
+  </g>
+  <g>
+    <rect x="1196" y="924" width="668" height="92" rx="3" fill="none" stroke="#c2533a" stroke-opacity=".48" stroke-dasharray="7 5"/>
+    <text x="1218" y="948" font-family="Consolas, 'Courier New', monospace" font-size="9.5" letter-spacing="1.5" fill="#c2533a">CAPTURE BOUNDARY</text>
+    <text x="1218" y="972" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#10181d">Benchmark model retired; the 30-request passes were not re-run.</text>
+    <text x="1218" y="994" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#10181d">Film screens are fresh local runs. No public endpoint is claimed.</text>
+  </g>
+  <text x="56" y="1052" font-family="Consolas, 'Courier New', monospace" font-size="8.8" letter-spacing="1.2" fill="#98a1a5">SOURCES: REPOSITORY + bench/results/{baseline,postfix}.json + RESULTS.md + LIVE UI CAPTURES 2026-11-06 / NO INVENTED METRICS</text>
+</svg>

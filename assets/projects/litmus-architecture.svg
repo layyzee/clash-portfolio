@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Litmus Android QA platform system architecture">
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#c9bda5" opacity=".45"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a3340"/>
+    </marker>
+    <marker id="arrow-mint" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2f7d5a"/>
+    </marker>
+    <style>
+      .title { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-weight: 700; fill: #1f2933; }
+      .body { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; fill: #1f2933; }
+      .sub { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; fill: #5c6574; }
+      .mono { font-family: 'Cascadia Mono', 'Consolas', monospace; fill: #4b5563; }
+      .tag { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1.6px; fill: #6b7280; }
+      .group-label { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 19px; font-weight: 700; letter-spacing: 2px; fill: #3f4a58; }
+      .group-sub { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 15px; fill: #77808f; }
+      .flow-label { font-family: 'Segoe UI', 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #44505f; }
+      .arrow { fill: none; stroke: #2a3340; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .arrow-dash { fill: none; stroke: #2a3340; stroke-width: 2.2; stroke-dasharray: 7 7; stroke-linecap: round; }
+      .box { stroke-width: 2.2; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#f7f2e7"/>
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+  <rect x="20" y="20" width="1880" height="1040" rx="20" fill="none" stroke="#2a3340" stroke-width="2" opacity=".5"/>
+  <rect x="27" y="27" width="1866" height="1026" rx="16" fill="none" stroke="#2a3340" stroke-width="1" opacity=".18"/>
+
+  <!-- header -->
+  <text x="64" y="52" class="tag" fill="#8a7a5c" style="letter-spacing:3.4px">WORKSHOP · LITMUS · SYSTEM ARCHITECTURE</text>
+  <text x="62" y="108" class="title" font-size="50">Litmus — Android QA platform</text>
+  <text x="64" y="146" class="sub" font-size="20">Upload an APK. Explore it on an emulator. Detect. Replay every candidate three times. Report only what survives.</text>
+  <path d="M64 118 C 260 114, 540 122, 760 118" fill="none" stroke="#c98a1e" stroke-width="3.4" stroke-linecap="round" opacity=".85"/>
+
+  <g id="run-badge">
+    <rect x="1352" y="38" width="500" height="92" rx="12" fill="#fbf7ec" stroke="#9a6a1d" stroke-width="1.8" opacity=".96"/>
+    <text x="1372" y="61" class="tag" fill="#9a6a1d">MEASURED ON A REAL RUN · 27 OCT 2026</text>
+    <text x="1372" y="92" class="body" font-size="23" font-weight="700">15 steps · 4 confirmed · 0 flaky · 519 s</text>
+    <text x="1372" y="116" class="mono" font-size="13">run_20261027-174314-198a67</text>
+  </g>
+
+  <!-- clients -->
+  <g id="clients">
+    <rect x="64" y="185" width="410" height="100" rx="14" fill="#ecebe5" stroke="#65707f" class="box"/>
+    <text x="84" y="211" class="tag">WEB CLIENT</text>
+    <text x="84" y="239" class="body" font-size="24" font-weight="700">Dashboard</text>
+    <text x="84" y="262" class="sub" font-size="15">FastAPI + Jinja · live steps over SSE</text>
+    <text x="84" y="279" class="sub" font-size="13">upload APK · watch status · open evidence</text>
+
+    <rect x="514" y="185" width="410" height="100" rx="14" fill="#ecebe5" stroke="#65707f" class="box"/>
+    <text x="534" y="211" class="tag">LOCAL CLIENT</text>
+    <text x="534" y="239" class="body" font-size="24" font-weight="700">mqa CLI</text>
+    <text x="534" y="262" class="sub" font-size="15">run · bench · verify-fix · doctor</text>
+    <text x="534" y="279" class="sub" font-size="13">attached AVD · exit codes for CI</text>
+
+    <rect x="964" y="185" width="410" height="100" rx="14" fill="#ecebe5" stroke="#65707f" class="box"/>
+    <text x="984" y="211" class="tag">AGENT CLIENT</text>
+    <text x="984" y="239" class="body" font-size="24" font-weight="700">MCP server</text>
+    <text x="984" y="262" class="sub" font-size="15">run_test · get_run · get_report</text>
+    <text x="984" y="279" class="sub" font-size="13">non-blocking · returns a run id</text>
+
+    <rect x="1414" y="185" width="410" height="100" rx="14" fill="#ecebe5" stroke="#65707f" class="box"/>
+    <text x="1434" y="211" class="tag">CI CLIENT</text>
+    <text x="1434" y="239" class="body" font-size="24" font-weight="700">GitHub Actions</text>
+    <text x="1434" y="262" class="sub" font-size="15">unit tests on every push</text>
+    <text x="1434" y="279" class="sub" font-size="13">device run only on a self-hosted emulator</text>
+  </g>
+
+  <!-- request bus -->
+  <g id="request-bus">
+    <path class="arrow" d="M269 285 L269 316 M719 285 L719 316 M1169 285 L1169 316 M1619 285 L1619 316"/>
+    <path class="arrow" d="M269 316 L1619 316"/>
+    <path class="arrow" d="M269 316 L269 386" marker-end="url(#arrow)"/>
+    <rect x="676" y="302" width="356" height="27" rx="6" fill="#f7f2e7"/>
+    <text x="854" y="321" text-anchor="middle" class="flow-label">APK upload · start run · read report</text>
+  </g>
+
+  <!-- control plane -->
+  <g id="control-plane">
+    <rect x="48" y="345" width="900" height="415" rx="18" fill="#fbf7ec" fill-opacity=".55" stroke="#7a8494" stroke-width="2.1" stroke-dasharray="9 8"/>
+    <text x="68" y="376" class="group-label">CONTROL PLANE</text>
+
+    <rect x="68" y="396" width="280" height="112" rx="13" fill="#dcf3e6" stroke="#2f7d5a" class="box"/>
+    <text x="86" y="422" class="body" font-size="23" font-weight="700">API</text>
+    <text x="86" y="447" class="sub" font-size="14">FastAPI · REST + SSE</text>
+    <text x="86" y="466" class="sub" font-size="14">artifact server · report lanes</text>
+    <text x="86" y="487" class="mono" font-size="12">no run state held in memory</text>
+
+    <rect x="388" y="396" width="230" height="112" rx="13" fill="#d7ecf9" stroke="#33608c" class="box"/>
+    <text x="406" y="422" class="body" font-size="23" font-weight="700">Postgres</text>
+    <text x="406" y="447" class="sub" font-size="14">runs · steps · events</text>
+    <text x="406" y="466" class="sub" font-size="14">findings · verdicts</text>
+    <text x="406" y="487" class="mono" font-size="12">survives API restarts</text>
+
+    <rect x="658" y="396" width="270" height="112" rx="13" fill="#f3e8cf" stroke="#9a6a1d" class="box"/>
+    <text x="676" y="422" class="body" font-size="23" font-weight="700">Redis + Arq</text>
+    <text x="676" y="447" class="sub" font-size="14">run queue · worker jobs</text>
+    <text x="676" y="466" class="sub" font-size="14">optional in dev</text>
+    <text x="676" y="487" class="mono" font-size="12">down → API runs inline</text>
+
+    <rect x="68" y="536" width="280" height="98" rx="13" fill="#dcf3e6" stroke="#2f7d5a" class="box"/>
+    <text x="86" y="562" class="body" font-size="21" font-weight="700">Report builder</text>
+    <text x="86" y="585" class="sub" font-size="14">confirmed · flaky · filtered</text>
+    <text x="86" y="606" class="sub" font-size="13">repro rate: confirmed attempts / valid</text>
+
+    <rect x="388" y="536" width="540" height="98" rx="13" fill="#e9e3f6" stroke="#5b4a9c" class="box"/>
+    <text x="406" y="562" class="body" font-size="21" font-weight="700">Artifact volume</text>
+    <text x="406" y="585" class="sub" font-size="14">screen_before · screen_at_bug · logcat · trace.json</text>
+    <text x="406" y="606" class="sub" font-size="14">repro.py · proxy flows · manifest · 3 replay attempts</text>
+
+    <rect x="68" y="660" width="860" height="72" rx="11" fill="#fbf7ec" stroke="#9aa2ae" stroke-width="1.4"/>
+    <text x="84" y="682" class="tag" fill="#77808f">ONE RUN = ONE PERSISTED STATE MACHINE</text>
+    <g font-family="'Cascadia Mono','Consolas',monospace" font-size="12.5" fill="#3f4a58">
+      <rect x="84" y="694" width="88" height="25" rx="6" fill="#ecebe5" stroke="#aab2bd"/><text x="128" y="711" text-anchor="middle">queued</text>
+      <text x="181" y="711" text-anchor="middle" fill="#77808f">›</text>
+      <rect x="190" y="694" width="102" height="25" rx="6" fill="#ecebe5" stroke="#aab2bd"/><text x="241" y="711" text-anchor="middle">provisioning</text>
+      <text x="301" y="711" text-anchor="middle" fill="#77808f">›</text>
+      <rect x="310" y="694" width="92" height="25" rx="6" fill="#ecebe5" stroke="#aab2bd"/><text x="356" y="711" text-anchor="middle">installing</text>
+      <text x="411" y="711" text-anchor="middle" fill="#77808f">›</text>
+      <rect x="420" y="694" width="94" height="25" rx="6" fill="#dcf3e6" stroke="#2f7d5a"/><text x="467" y="711" text-anchor="middle">exploring</text>
+      <text x="523" y="711" text-anchor="middle" fill="#77808f">›</text>
+      <rect x="532" y="694" width="94" height="25" rx="6" fill="#dcf3e6" stroke="#2f7d5a"/><text x="579" y="711" text-anchor="middle">detecting</text>
+      <text x="635" y="711" text-anchor="middle" fill="#77808f">›</text>
+      <rect x="644" y="694" width="94" height="25" rx="6" fill="#f6dfdc" stroke="#a33d35"/><text x="691" y="711" text-anchor="middle">verifying</text>
+      <text x="747" y="711" text-anchor="middle" fill="#77808f">›</text>
+      <rect x="756" y="694" width="90" height="25" rx="6" fill="#ecebe5" stroke="#aab2bd"/><text x="801" y="711" text-anchor="middle">reporting</text>
+      <text x="855" y="711" text-anchor="middle" fill="#77808f">›</text>
+      <rect x="864" y="694" width="46" height="25" rx="6" fill="#dcf3e6" stroke="#2f7d5a"/><text x="887" y="711" text-anchor="middle">done</text>
+    </g>
+
+    <!-- control arrows -->
+    <path class="arrow" d="M348 452 L388 452" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <rect x="352" y="435" width="32" height="17" rx="4" fill="#fbf7ec"/>
+    <text x="368" y="448" text-anchor="middle" class="flow-label" font-size="12">SQL</text>
+
+    <path class="arrow" d="M208 396 L208 382 L793 382 L793 396" marker-end="url(#arrow)"/>
+    <rect x="452" y="369" width="92" height="22" rx="5" fill="#fbf7ec"/>
+    <text x="498" y="385" text-anchor="middle" class="flow-label">enqueue job</text>
+
+    <path class="arrow" d="M503 508 L503 522 L208 522 L208 536" marker-end="url(#arrow)"/>
+    <rect x="320" y="508" width="58" height="20" rx="5" fill="#fbf7ec"/>
+    <text x="349" y="523" text-anchor="middle" class="flow-label">read</text>
+  </g>
+
+  <!-- runner host -->
+  <g id="runner-host">
+    <rect x="972" y="345" width="900" height="415" rx="18" fill="#fbf7ec" fill-opacity=".45" stroke="#7a8494" stroke-width="2.1" stroke-dasharray="9 8"/>
+    <text x="992" y="376" class="group-label">RUNNER HOST</text>
+    <text x="1166" y="376" class="group-sub">one AVD per run · Windows/Linux + Android SDK</text>
+
+    <rect x="992" y="396" width="260" height="112" rx="13" fill="#e9e3f6" stroke="#5b4a9c" class="box"/>
+    <text x="1010" y="422" class="body" font-size="23" font-weight="700">Worker</text>
+    <text x="1010" y="447" class="sub" font-size="14">lifecycle · policy · evidence</text>
+    <text x="1010" y="466" class="sub" font-size="14">explore → detect → replay</text>
+    <text x="1010" y="487" class="mono" font-size="12">per-step loop + candidate gate</text>
+
+    <rect x="992" y="546" width="260" height="86" rx="13" fill="#e9e3f6" stroke="#5b4a9c" class="box"/>
+    <text x="1010" y="571" class="body" font-size="20" font-weight="700">uiautomator2 driver</text>
+    <text x="1010" y="593" class="sub" font-size="13">tap · type · hide IME · dump UI</text>
+    <text x="1010" y="613" class="sub" font-size="12">selectors: resource id → text → path → bounds</text>
+
+    <rect x="1292" y="546" width="235" height="86" rx="13" fill="#f6dfdc" stroke="#a33d35" class="box"/>
+    <text x="1310" y="571" class="body" font-size="20" font-weight="700">Android emulator</text>
+    <text x="1310" y="593" class="sub" font-size="13">API 33 · x86_64</text>
+    <text x="1310" y="613" class="sub" font-size="13">720 × 1280 · unrooted</text>
+
+    <rect x="1567" y="546" width="275" height="86" rx="13" fill="#d7ecf9" stroke="#33608c" class="box"/>
+    <text x="1585" y="571" class="body" font-size="20" font-weight="700">mitmproxy</text>
+    <text x="1585" y="593" class="sub" font-size="13">captures every HTTP flow</text>
+    <text x="1585" y="613" class="sub" font-size="13">5xx hard · 4xx opt-in per profile</text>
+
+    <rect x="1292" y="662" width="550" height="74" rx="13" fill="#e9e3f6" stroke="#5b4a9c" class="box"/>
+    <text x="1310" y="686" class="body" font-size="20" font-weight="700">Detectors</text>
+    <text x="1310" y="708" class="sub" font-size="13">crash · ANR · HTTP 5xx · dead tap · UI overlap · environment</text>
+    <text x="1310" y="726" class="sub" font-size="12">hard signal = objective evidence · heuristic = survives replay</text>
+
+    <rect x="992" y="662" width="260" height="74" rx="13" fill="#f6dfdc" stroke="#a33d35" class="box"/>
+    <text x="1010" y="686" class="body" font-size="20" font-weight="700">Replay gate</text>
+    <text x="1010" y="708" class="sub" font-size="13">pm clear · relaunch · 3 attempts</text>
+    <text x="1010" y="726" class="sub" font-size="12">same selectors · no LLM in the loop</text>
+
+    <!-- runner arrows -->
+    <path class="arrow" d="M1122 508 L1122 546" marker-end="url(#arrow)"/>
+    <rect x="1094" y="516" width="56" height="18" rx="4" fill="#fbf7ec"/>
+    <text x="1122" y="529" text-anchor="middle" class="flow-label" font-size="12">act</text>
+
+    <path class="arrow" d="M1252 589 L1292 589" marker-end="url(#arrow)"/>
+    <rect x="1256" y="572" width="34" height="17" rx="4" fill="#fbf7ec"/>
+    <text x="1273" y="585" text-anchor="middle" class="flow-label" font-size="12">adb</text>
+
+    <path class="arrow" d="M1527 589 L1567 589" marker-end="url(#arrow)"/>
+    <rect x="1530" y="572" width="42" height="17" rx="4" fill="#fbf7ec"/>
+    <text x="1551" y="585" text-anchor="middle" class="flow-label" font-size="12">HTTP</text>
+
+    <path class="arrow" d="M1410 632 L1410 662" marker-end="url(#arrow)"/>
+    <rect x="1338" y="640" width="144" height="18" rx="4" fill="#fbf7ec"/>
+    <text x="1410" y="653" text-anchor="middle" class="flow-label" font-size="12">logcat + screen</text>
+
+    <path class="arrow" d="M1705 632 L1705 662" marker-end="url(#arrow)"/>
+    <rect x="1660" y="640" width="90" height="18" rx="4" fill="#fbf7ec"/>
+    <text x="1705" y="653" text-anchor="middle" class="flow-label" font-size="12">flows</text>
+
+    <path class="arrow" d="M1292 699 L1252 699" marker-end="url(#arrow)"/>
+    <rect x="1254" y="682" width="32" height="17" rx="4" fill="#fbf7ec"/>
+    <text x="1270" y="695" text-anchor="middle" class="flow-label" font-size="12">find</text>
+
+    <path class="arrow" d="M992 699 C 982 660, 982 520, 992 452" marker-end="url(#arrow)"/>
+    <text x="986" y="586" text-anchor="middle" class="flow-label" font-size="12" transform="rotate(-90 986 586)">verdicts</text>
+  </g>
+
+  <!-- cross-plane flows -->
+  <g id="cross-plane">
+    <path class="arrow" d="M928 420 L992 420" marker-end="url(#arrow)"/>
+    <rect x="938" y="403" width="42" height="17" rx="4" fill="#f7f2e7"/>
+    <text x="959" y="416" text-anchor="middle" class="flow-label" font-size="12">job</text>
+
+    <path class="arrow" d="M992 470 L960 470 L960 520 L503 520 L503 508" marker-end="url(#arrow)"/>
+    <text x="968" y="495" text-anchor="middle" class="flow-label" font-size="11" transform="rotate(-90 968 495)">writes</text>
+
+    <path class="arrow" d="M992 450 L952 450 L952 590 L928 590" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- outputs -->
+  <g id="outputs">
+    <rect x="48" y="815" width="420" height="160" rx="15" fill="#dcf3e6" stroke="#2f7d5a" class="box"/>
+    <text x="70" y="846" class="tag" fill="#2f7d5a">OUTPUT 01</text>
+    <text x="70" y="876" class="body" font-size="25" font-weight="700">Report</text>
+    <text x="70" y="903" class="sub" font-size="15">confirmed · flaky · filtered lanes</text>
+    <text x="70" y="925" class="sub" font-size="15">every finding keeps its evidence links</text>
+    <text x="70" y="951" class="mono" font-size="13">live run: 4 confirmed · 0 flaky</text>
+
+    <rect x="488" y="815" width="460" height="160" rx="15" fill="#e9e3f6" stroke="#5b4a9c" class="box"/>
+    <text x="510" y="846" class="tag" fill="#5b4a9c">OUTPUT 02</text>
+    <text x="510" y="876" class="body" font-size="25" font-weight="700">Evidence bundle</text>
+    <text x="510" y="903" class="sub" font-size="15">screen_before · screen_at_bug · logcat</text>
+    <text x="510" y="925" class="sub" font-size="15">trace.json · repro.py · proxy flows</text>
+    <text x="510" y="951" class="mono" font-size="13">3 clean replay attempts stored per finding</text>
+
+    <rect x="968" y="815" width="400" height="160" rx="15" fill="#f6dfdc" stroke="#a33d35" class="box"/>
+    <text x="990" y="846" class="tag" fill="#a33d35">OUTPUT 03</text>
+    <text x="990" y="876" class="body" font-size="25" font-weight="700">verify-fix</text>
+    <text x="990" y="903" class="sub" font-size="15">replays the saved trace on a patched APK</text>
+    <text x="990" y="925" class="sub" font-size="15">fixed · still reproduces · replay error</text>
+    <text x="990" y="951" class="mono" font-size="13">3/3 not reproduced → fixed · exit 0</text>
+
+    <rect x="1388" y="815" width="484" height="160" rx="15" fill="#f3e8cf" stroke="#9a6a1d" class="box"/>
+    <text x="1410" y="846" class="tag" fill="#9a6a1d">OUTPUT 04</text>
+    <text x="1410" y="876" class="body" font-size="25" font-weight="700">Benchmark + Slack</text>
+    <text x="1410" y="903" class="sub" font-size="15">3 runs · 4/4 recall · 0 false positives</text>
+    <text x="1410" y="925" class="sub" font-size="15">the random fifth bug was never sold as confirmed</text>
+    <text x="1410" y="951" class="mono" font-size="13">Slack post on done · report link + counts</text>
+  </g>
+
+  <!-- result arrows -->
+  <g id="result-arrows">
+    <path class="arrow" d="M258 760 L258 815" marker-end="url(#arrow)"/>
+    <rect x="268" y="776" width="54" height="19" rx="4" fill="#f7f2e7"/>
+    <text x="295" y="790" text-anchor="middle" class="flow-label" font-size="12">read</text>
+
+    <path class="arrow" d="M718 760 L718 815" marker-end="url(#arrow)"/>
+    <rect x="728" y="776" width="54" height="19" rx="4" fill="#f7f2e7"/>
+    <text x="755" y="790" text-anchor="middle" class="flow-label" font-size="12">serve</text>
+
+    <path class="arrow" d="M1168 760 L1168 815" marker-end="url(#arrow)"/>
+    <rect x="1178" y="776" width="54" height="19" rx="4" fill="#f7f2e7"/>
+    <text x="1205" y="790" text-anchor="middle" class="flow-label" font-size="12">replay</text>
+
+    <path class="arrow" d="M1600 760 L1600 815" marker-end="url(#arrow)"/>
+    <rect x="1610" y="776" width="54" height="19" rx="4" fill="#f7f2e7"/>
+    <text x="1637" y="790" text-anchor="middle" class="flow-label" font-size="12">score</text>
+  </g>
+
+  <g id="footer">
+    <path d="M64 1012 L1856 1012" stroke="#b9ac93" stroke-width="1.2"/>
+    <text x="64" y="1038" class="mono" font-size="13">ground truth: benchmark/results/20261027-170453.json · live run: run_20261027-174314-198a67</text>
+    <text x="1856" y="1038" text-anchor="end" class="mono" font-size="13">github.com/iamsiddhesh-dev/litmus</text>
+  </g>
+</svg>

@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="IsoTherm data pipeline, labeled">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9d9382"/></marker>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#171a20" stroke-opacity=".055"/></pattern>
+  <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#d94f2b" fill-opacity=".12"/></pattern>
+  <radialGradient id="glow" cx="84%" cy="4%" r="62%"><stop offset="0" stop-color="#e4572e" stop-opacity=".13"/><stop offset="1" stop-color="#f2ede2" stop-opacity="0"/></radialGradient>
+  <linearGradient id="ramp" x1="0" x2="1"><stop offset="0" stop-color="#2d7fa3"/><stop offset=".35" stop-color="#69b58e"/><stop offset=".62" stop-color="#f0c24d"/><stop offset=".82" stop-color="#ef7f3a"/><stop offset="1" stop-color="#cf3f22"/></linearGradient>
+</defs>
+<rect width="1920" height="1080" fill="#f2ede2"/>
+<rect width="1920" height="1080" fill="url(#grid)"/>
+<rect width="1920" height="1080" fill="url(#dots)"/>
+<rect width="1920" height="1080" fill="url(#glow)"/>
+<rect x="22" y="22" width="1876" height="1036" fill="none" stroke="#9d9382" stroke-opacity=".55"/>
+<rect x="22" y="22" width="1876" height="5" fill="url(#ramp)"/>
+
+<text x="58" y="62" font-family="Consolas, 'Courier New', monospace" font-size="11.5" fill="#d94f2b"   letter-spacing="2.2" >WORKSHOP / ARCHITECTURE 10 / 11</text>
+<text x="1862" y="62" font-family="Consolas, 'Courier New', monospace" font-size="11.5" fill="#5c6470"  text-anchor="end" letter-spacing="2" >ISOTHERM / SOLO BUILD / 2026</text>
+<line x1="58" y1="80" x2="1862" y2="80" stroke="#9d9382" stroke-opacity=".5"/>
+
+<text x="58" y="136" font-family="Arial, Helvetica, sans-serif" font-size="46" fill="#171a20" font-weight="700"   >From a temperature grid</text>
+<text x="58" y="184" font-family="Arial, Helvetica, sans-serif" font-size="46" fill="#d94f2b" font-weight="700"   >to an explainable score.</text>
+<text x="790" y="122" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#2c3139" font-weight="600"   >Real data path. Real weights. Live product.</text>
+<text x="790" y="148" font-family="Arial, Helvetica, sans-serif" font-size="14.5" fill="#5c6470"    >Every score decomposes into named drivers with a published contribution.</text>
+<text x="790" y="171" font-family="Arial, Helvetica, sans-serif" font-size="14.5" fill="#5c6470"    >The map, ranking and safety view all read the same exported dataset.</text>
+
+<g>
+  <rect x="1430" y="104" width="432" height="114" rx="7" fill="#ffffff" stroke="#c9c0af" stroke-opacity=".8"/>
+  <text x="1450" y="130" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#0b8b80"   letter-spacing="1.8" >LIVE DEPLOYMENT</text>
+  <text x="1450" y="158" font-family="Consolas, 'Courier New', monospace" font-size="17" fill="#171a20" font-weight="600"   >iso-therm.vercel.app</text>
+  <text x="1450" y="181" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"    >42 zones  ·  9,941 tiles at 100 m</text>
+  <text x="1450" y="201" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"    >14 days  ·  Houston, TX</text>
+</g>
+
+<text x="58" y="242" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#d94f2b"   letter-spacing="2" >PLANE 01 / INGEST</text>
+<text x="1862" y="242" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"  text-anchor="end" letter-spacing="1.2" >FORTYGUARD TEMPERATURE API + OPENSTREETMAP</text>
+
+<g>
+  <rect x="63" y="269" width="560" height="168" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="58" y="262" width="560" height="168" rx="7" fill="#fbf7ee" stroke="#d94f2b" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="58" y="262" width="5" height="168" rx="2.5" fill="#d94f2b"/>
+</g>
+<text x="80" y="294" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#d94f2b"   letter-spacing="1.4" >01 / FORTYGUARD HEATMAP</text>
+<text x="80" y="325" font-family="Consolas, 'Courier New', monospace" font-size="20" fill="#171a20" font-weight="600"   >/v1/heatmap  ·  analytic tcm</text>
+<text x="80" y="354" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3139"    >14-day window: 2026-08-01 to 2026-08-14</text>
+<text x="80" y="379" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3139"    >14-day peak, average and overnight low, per tile</text>
+<text x="80" y="405" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"    >Source: FortyGuard Temperature API</text>
+
+<g>
+  <rect x="685" y="269" width="540" height="168" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="680" y="262" width="540" height="168" rx="7" fill="#fbf7ee" stroke="#ef9a4c" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="680" y="262" width="5" height="168" rx="2.5" fill="#ef9a4c"/>
+</g>
+<text x="702" y="294" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#b56a1f"   letter-spacing="1.4" >02 / FORTYGUARD ANALYTICS</text>
+<text x="702" y="325" font-family="Consolas, 'Courier New', monospace" font-size="20" fill="#171a20" font-weight="600"   >exceedance · persistence</text>
+<text x="702" y="354" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3139"    >time of measure  ·  35°C threshold</text>
+<text x="702" y="379" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3139"    >Hours above 35°C and the longest unbroken spell</text>
+<text x="702" y="405" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"    >Source: FortyGuard analytics endpoints</text>
+
+<g>
+  <rect x="1295" y="269" width="372" height="168" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="1290" y="262" width="372" height="168" rx="7" fill="#fbf7ee" stroke="#2d7fa3" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="1290" y="262" width="5" height="168" rx="2.5" fill="#2d7fa3"/>
+</g>
+<text x="1312" y="294" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#2d7fa3"   letter-spacing="1.4" >03 / OPENSTREETMAP</text>
+<text x="1312" y="325" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#171a20" font-weight="600"   >Overpass context</text>
+<text x="1312" y="354" font-family="Consolas, 'Courier New', monospace" font-size="13.5" fill="#2c3139"    >208 water · 119 cooling</text>
+<text x="1312" y="377" font-family="Consolas, 'Courier New', monospace" font-size="13.5" fill="#2c3139"    >83 shade · 57 medical</text>
+<text x="1312" y="400" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#5c6470"    >parks · places · amenities</text>
+
+<g>
+  <rect x="1707" y="269" width="160" height="168" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="1702" y="262" width="160" height="168" rx="7" fill="#fbf7ee" stroke="#0b8b80" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="1702" y="262" width="5" height="168" rx="2.5" fill="#0b8b80"/>
+</g>
+<text x="1722" y="294" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#0b8b80"   letter-spacing="1.4" >04 / SAMPLE</text>
+<text x="1722" y="326" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#171a20" font-weight="600"   >2026</text>
+<text x="1722" y="352" font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#2c3139"    >Aug 14</text>
+<text x="1722" y="376" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#5c6470"    >42 zones</text>
+<text x="1722" y="398" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#5c6470"    >74.4% RH</text>
+
+<line x1="618" y1="346" x2="674" y2="346" stroke="#9d9382" stroke-width="1.6"  marker-end="url(#arrow)"/>
+<line x1="1220" y1="346" x2="1284" y2="346" stroke="#9d9382" stroke-width="1.6"  marker-end="url(#arrow)"/>
+<line x1="1662" y1="346" x2="1696" y2="346" stroke="#9d9382" stroke-width="1.6"  marker-end="url(#arrow)"/>
+
+<text x="58" y="476" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#d94f2b"   letter-spacing="2" >PLANE 02 / BUILD + SCORE</text>
+<text x="1862" y="476" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"  text-anchor="end" letter-spacing="1.2" >PYTHON EXPORTS THE SAME DATA THE APP RENDERS</text>
+
+<g>
+  <rect x="63" y="503" width="360" height="208" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="58" y="496" width="360" height="208" rx="7" fill="#fbf7ee" stroke="#171a20" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="58" y="496" width="5" height="208" rx="2.5" fill="#171a20"/>
+</g>
+<text x="80" y="528" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#171a20"   letter-spacing="1.4" >05 / PYTHON EXPORT</text>
+<text x="80" y="560" font-family="Consolas, 'Courier New', monospace" font-size="17" fill="#171a20" font-weight="600"   >fetch_data.py</text>
+<text x="80" y="584" font-family="Consolas, 'Courier New', monospace" font-size="17" fill="#171a20" font-weight="600"   >fetch_analytics.py</text>
+<text x="80" y="608" font-family="Consolas, 'Courier New', monospace" font-size="17" fill="#171a20" font-weight="600"   >export_web_data.py</text>
+<text x="80" y="642" font-family="Arial, Helvetica, sans-serif" font-size="13.5" fill="#2c3139"    >SQLite store + static JSON</text>
+<text x="80" y="668" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"    >No API key reaches the browser</text>
+
+<g>
+  <rect x="461" y="503" width="330" height="208" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="456" y="496" width="330" height="208" rx="7" fill="#fbf7ee" stroke="#d94f2b" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="456" y="496" width="5" height="208" rx="2.5" fill="#d94f2b"/>
+</g>
+<text x="478" y="528" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#d94f2b"   letter-spacing="1.4" >06 / TILE STORE</text>
+<text x="478" y="560" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#171a20" font-weight="700"   >9,941 tiles</text>
+<text x="478" y="594" font-family="Consolas, 'Courier New', monospace" font-size="15" fill="#2c3139"    >at 100 m</text>
+<text x="478" y="626" font-family="Consolas, 'Courier New', monospace" font-size="13.5" fill="#2c3139"    >heat_risk.db</text>
+<text x="478" y="650" font-family="Consolas, 'Courier New', monospace" font-size="13.5" fill="#2c3139"    >tile_risk_scores.json</text>
+<text x="478" y="678" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#5c6470"    >zones.json · tiles.json</text>
+
+<g>
+  <rect x="829" y="503" width="470" height="208" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="824" y="496" width="470" height="208" rx="7" fill="#fbf7ee" stroke="#0b8b80" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="824" y="496" width="5" height="208" rx="2.5" fill="#0b8b80"/>
+</g>
+<text x="846" y="528" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#0b8b80"   letter-spacing="1.4" >07 / RISK ENGINE</text>
+<text x="846" y="558" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#171a20" font-weight="600"   >Published prototype weights</text>
+<text x="846" y="590" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >Heat exposure</text>
+<text x="1212" y="590" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#171a20" font-weight="600" text-anchor="end"  >0.40</text>
+<text x="846" y="612" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >Green-cover deficit</text>
+<text x="1212" y="612" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#171a20" font-weight="600" text-anchor="end"  >0.15</text>
+<text x="846" y="634" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >Building density</text>
+<text x="1212" y="634" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#171a20" font-weight="600" text-anchor="end"  >0.15</text>
+<text x="846" y="656" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >Cooling-water deficit</text>
+<text x="1212" y="656" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#171a20" font-weight="600" text-anchor="end"  >0.10</text>
+<text x="846" y="678" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >Shade deficit</text>
+<text x="1212" y="678" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#171a20" font-weight="600" text-anchor="end"  >0.10</text>
+<text x="846" y="700" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5c6470"    >Road density · temperature range</text>
+<text x="1212" y="700" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#5c6470"  text-anchor="end"  >0.05 · 0.05</text>
+
+<g>
+  <rect x="1341" y="503" width="526" height="208" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="1336" y="496" width="526" height="208" rx="7" fill="#fbf7ee" stroke="#d94f2b" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="1336" y="496" width="5" height="208" rx="2.5" fill="#d94f2b"/>
+</g>
+<text x="1358" y="528" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#d94f2b"   letter-spacing="1.4" >08 / WHAT A ZONE CARRIES</text>
+<text x="1358" y="560" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#171a20" font-weight="600"   >Score 0–100 + category</text>
+<text x="1358" y="594" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3139"    >Named drivers, ranked by contribution</text>
+<text x="1358" y="618" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3139"    >Peak, average and gap to coolest</text>
+<text x="1358" y="642" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3139"    >Projected score after interventions</text>
+<text x="1358" y="674" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#5c6470"    >42 zones ranked city-wide</text>
+
+<line x1="418" y1="600" x2="452" y2="600" stroke="#9d9382" stroke-width="1.6"  marker-end="url(#arrow)"/>
+<line x1="786" y1="600" x2="820" y2="600" stroke="#9d9382" stroke-width="1.6"  marker-end="url(#arrow)"/>
+<line x1="1294" y1="600" x2="1332" y2="600" stroke="#9d9382" stroke-width="1.6"  marker-end="url(#arrow)"/>
+
+<text x="58" y="754" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#d94f2b"   letter-spacing="2" >PLANE 03 / SERVE + TRUST</text>
+<text x="1862" y="754" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"  text-anchor="end" letter-spacing="1.2" >THE LIVE PRODUCT IS THE PROOF</text>
+
+<g>
+  <rect x="63" y="781" width="410" height="184" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="58" y="774" width="410" height="184" rx="7" fill="#fbf7ee" stroke="#171a20" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="58" y="774" width="5" height="184" rx="2.5" fill="#171a20"/>
+</g>
+<text x="80" y="806" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#171a20"   letter-spacing="1.4" >09 / NEXT.JS APP</text>
+<text x="80" y="838" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#171a20" font-weight="600"   >Map · Impact · Safety · Report</text>
+<text x="80" y="868" font-family="Arial, Helvetica, sans-serif" font-size="13.5" fill="#2c3139"    >Static export, prerendered routes</text>
+<text x="80" y="892" font-family="Arial, Helvetica, sans-serif" font-size="13.5" fill="#2c3139"    >No login. Public transparency view.</text>
+<text x="80" y="922" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"    >Deployed on Vercel</text>
+
+<g>
+  <rect x="509" y="781" width="410" height="184" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="504" y="774" width="410" height="184" rx="7" fill="#fbf7ee" stroke="#2d7fa3" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="504" y="774" width="5" height="184" rx="2.5" fill="#2d7fa3"/>
+</g>
+<text x="526" y="806" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#2d7fa3"   letter-spacing="1.4" >10 / LEAFLET MAP</text>
+<text x="526" y="838" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#171a20" font-weight="600"   >Heat layers + OSM context</text>
+<text x="526" y="868" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >Risk, temperature, exceedance, persistence</text>
+<text x="526" y="892" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >Water, cooling, shade and medical markers</text>
+<text x="526" y="922" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"    >Zone selection from map or search</text>
+
+<g>
+  <rect x="955" y="781" width="410" height="184" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="950" y="774" width="410" height="184" rx="7" fill="#fbf7ee" stroke="#0b8b80" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="950" y="774" width="5" height="184" rx="2.5" fill="#0b8b80"/>
+</g>
+<text x="972" y="806" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#0b8b80"   letter-spacing="1.4" >11 / SUPABASE</text>
+<text x="972" y="838" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#171a20" font-weight="600"   >Anonymous community reports</text>
+<text x="972" y="868" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >reports table + RLS insert-only</text>
+<text x="972" y="892" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >photo bucket + realtime subscription</text>
+<text x="972" y="922" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"    >Rounded to a 1.5 km zone</text>
+
+<g>
+  <rect x="1401" y="781" width="466" height="184" rx="7" fill="#7a6a58" opacity=".10"/>
+  <rect x="1396" y="774" width="466" height="184" rx="7" fill="#fbf7ee" stroke="#d94f2b" stroke-opacity=".85" stroke-width="1.2"/>
+  <rect x="1396" y="774" width="5" height="184" rx="2.5" fill="#d94f2b"/>
+</g>
+<text x="1418" y="806" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#d94f2b"   letter-spacing="1.4" >12 / TRUST BOUNDARY</text>
+<text x="1418" y="838" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#171a20" font-weight="600"   >Prototype measure, stated in the app</text>
+<text x="1418" y="868" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >Risk weights are transparent prototype</text>
+<text x="1418" y="890" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >values, not medically validated thresholds.</text>
+<text x="1418" y="916" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#2c3139"    >Projections are modelled, not measured.</text>
+
+<line x1="468" y1="866" x2="500" y2="866" stroke="#9d9382" stroke-width="1.6"  marker-end="url(#arrow)"/>
+<line x1="914" y1="866" x2="946" y2="866" stroke="#9d9382" stroke-width="1.6"  marker-end="url(#arrow)"/>
+<line x1="1360" y1="866" x2="1392" y2="866" stroke="#9d9382" stroke-width="1.6"  marker-end="url(#arrow)"/>
+
+<line x1="58" y1="1002" x2="1862" y2="1002" stroke="#9d9382" stroke-opacity=".5"/>
+<text x="58" y="1034" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"    >SOURCE: FortyGuard Temperature API · OpenStreetMap via Overpass · commit 8aa3094</text>
+<text x="1862" y="1034" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5c6470"  text-anchor="end"  >LIVE: https://iso-therm.vercel.app/</text>
+</svg>
